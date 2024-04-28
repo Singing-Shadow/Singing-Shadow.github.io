@@ -4,15 +4,17 @@
 
 #image {
     column-count: 4;
-    column-width: 1%;
+    column-width: 0.5%;
 }
 #image img {
     width: 100%;
     height: auto;
     margin: 3% 0;
 
+    /* 搭配 “鼠标滑过 - 图片放大” 使用 */
     /* transition: transform 0.3s ease; */
 }
-#image-container img:hover {
+/* 鼠标滑过 - 图片放大 */
+/* #image-container img:hover {
     transform: scale(1.08);
-}
+} */
