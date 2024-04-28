@@ -93,10 +93,9 @@ nav {
 /* 鼠标划过 - 菜单栏选项 */
 .menu li:hover {
     background-color: #C8CD97;
-    color: #ffffff;
 }
 /* 1 */
-.menu li::before {
+.menu a::before {
     /* 不占空间相对定位 */
     position: absolute;
     content: " ";
@@ -111,9 +110,14 @@ nav {
     transition: width 0.01s;
 }
 /* 1 */
-.menu li:hover::before {
+.menu li:hover a::before {
     width: 98%;
     transition: width 0.01s;
+}
+
+/* 鼠标划过 - 菜单栏选项 */
+.menu li:hover >a{
+    color: #ffffff;
 }
 
 img {
