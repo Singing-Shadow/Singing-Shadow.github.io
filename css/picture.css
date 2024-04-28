@@ -1,0 +1,17 @@
+#image-container {
+    margin: 2%;
+}
+
+#image {
+    column-count: 4;
+}
+#image img {
+    width: 100%;
+    height: auto;
+    margin: 3% 0;
+
+    transition: transform 0.3s ease;
+}
+#image-container img:hover {
+    transform: scale(1.08);
+}
