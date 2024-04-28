@@ -112,7 +112,7 @@ nav {
 /* 1 */
 .menu li:hover::before {
     width: 98%;
-    transition: width 0.1s;
+    transition: width 0.01s;
 }
 
 img {
