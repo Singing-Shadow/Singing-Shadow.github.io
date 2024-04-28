@@ -76,7 +76,7 @@ nav {
     background-color: #C8CD97;
 }
 /* 鼠标划过 - 导航栏选项字体 */
-.number:hover a {
+.number:hover>a {
     color: rgb(255, 255, 255);
 }
 /* 鼠标划过 - 菜单栏 */
@@ -98,7 +98,7 @@ nav {
 .menu a::before {
     /* 不占空间相对定位 */
     position: absolute;
-    content: " ";
+    content: "";
     display: block;
     height: 90%;
     top: 0;
@@ -116,7 +116,7 @@ nav {
 }
 
 /* 鼠标划过 - 菜单栏选项 */
-.menu li:hover >a{
+.menu li:hover>a{
     color: #ffffff;
 }
 

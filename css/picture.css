@@ -4,13 +4,14 @@
 
 #image {
     column-count: 4;
+    column-width: 1%;
 }
 #image img {
     width: 100%;
     height: auto;
     margin: 3% 0;
 
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
 }
 #image-container img:hover {
     transform: scale(1.08);
