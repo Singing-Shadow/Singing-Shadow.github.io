@@ -9,7 +9,7 @@
 #image>a {
     display: block;
     width: 100%;
-    padding-top: 100%;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     margin: 1% 0;
 
