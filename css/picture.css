@@ -8,7 +8,8 @@
 }
 #image img {
     width: 100%;
-    height: auto;
+    padding-top: 100%;
+    overflow: hidden;
     margin: 1% 0;
 
     /* 搭配 “鼠标滑过 - 图片放大” 使用 */
