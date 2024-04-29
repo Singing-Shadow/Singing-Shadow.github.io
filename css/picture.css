@@ -6,7 +6,8 @@
     column-count: 4;
     column-gap: 1%;
 }
-#image img {
+#image>a {
+    display: block;
     width: 100%;
     padding-top: 100%;
     overflow: hidden;
