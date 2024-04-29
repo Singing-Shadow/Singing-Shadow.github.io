@@ -13,7 +13,7 @@
     height: auto;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    margin: 1% 0;
+    margin: 2% 0;
 
     /* 搭配 “鼠标滑过 - 图片放大” 使用 */
     /* transition: transform 0.3s ease; */
