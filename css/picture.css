@@ -1,9 +1,15 @@
+#image-container {
+    margin: 1%;
+}
+
 #image {
+    margin: 0%;
     column-count: 4;
     column-gap: 1%;
 }
 #image>a {
     display: block;
+    /* 图片圆角 */
     border-radius: 2%;
     /* 先将图片以原始比例放大 */
     width: 100%;
