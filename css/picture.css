@@ -3,14 +3,19 @@
 }
 
 #image {
+    /* 图片容器列数 */
     column-count: 4;
+    /* 图片容器列间距 */
     column-gap: 1%;
 }
 #image>a {
+    /* 内联块 */
+    display: inline-block;
     /* 图片圆角 */
     border-radius: 2%;
-    /* 图片容器 */
+    /* 图片上级容器 */
     width: 100%;
+    margin: 2% 0;
     /* 限定容器宽高比为 1 / 1 */
     aspect-ratio: 1 / 1;
     /* 隐藏溢出部分 */
@@ -25,6 +30,9 @@
 } */
 
 #image>a>img {
+    /* 图片容器 */
+    width: 100%;
+    height: 100%;
     /* 图片自适应容器大小 */
     object-fit: cover;
 }
