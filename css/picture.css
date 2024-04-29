@@ -15,9 +15,8 @@
     height: auto;
     /* 限定容器宽高比为 1 / 1 */
     aspect-ratio: 1 / 1;
+    overflow: hidden;
     
-    margin: 0 0 2% 0;
-
     /* 搭配 “鼠标滑过 - 图片放大” 使用 */
     /* transition: transform 0.3s ease; */
 }
@@ -27,6 +26,7 @@
 } */
 
 #image>a>img {
+    margin: 0 0 2% 0;
     overflow: hidden;
     /* 图片自适应容器大小 */
     object-fit: cover;
