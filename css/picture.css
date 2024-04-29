@@ -8,7 +8,9 @@
 }
 #image>a {
     display: block;
-    width: 100%;
+    border-radius: 2%;
+    width: auto;
+    height: auto;
     aspect-ratio: 1 / 1;
     overflow: hidden;
     margin: 1% 0;
