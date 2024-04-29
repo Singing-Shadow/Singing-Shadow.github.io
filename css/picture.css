@@ -16,9 +16,7 @@
     height: auto;
     /* 限定容器宽高比为 1 / 1 */
     aspect-ratio: 1 / 1;
-    overflow: hidden;
-    /* 图片自适应容器大小 */
-    object-fit: cover;
+    
     margin: 2% 0;
 
     /* 搭配 “鼠标滑过 - 图片放大” 使用 */
@@ -28,3 +26,8 @@
 /* #image-container img:hover {
     transform: scale(1.08);
 } */
+
+#image>a>img {
+    /* 图片自适应容器大小 */
+    object-fit: cover;
+}
