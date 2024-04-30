@@ -4,4 +4,4 @@ const pictureFolder = "https://singing-shadow.github.io/picture";
 // 获取包含图片文件的文件夹
 fetch(pictureFolder)
     .then((response) => response.json())
-    .then((data) => window.alert(data));
+    .then((data) => innerHTML(data));
