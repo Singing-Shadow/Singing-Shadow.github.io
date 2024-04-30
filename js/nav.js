@@ -1,4 +1,4 @@
-document.getElementsByTagName("nav").innerHTML = `
+document.getElementById("nav").innerHTML = `
     <ul class="numberList">
         <li class="number">
             <a href="index.html">首页</a>
