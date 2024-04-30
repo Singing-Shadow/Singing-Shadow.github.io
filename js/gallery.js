@@ -1,11 +1,17 @@
 // 获取图片文件夹路径
 const pictureFolder = [
-    "picture/Arcaea_光.jpg"
+    "picture/紅(Arcaea).jpg"
+  , "picture/花对立.jpg"
+  , "picture/或る神話の消えた日.jpg"
+  , "picture/皮卡丘.jpg"
+  , "picture/无题.jpg"
+  , "picture/Arcaea_光.jpg"
   , "picture/Arcaea_光2.jpg"
   , "picture/Arcaea_光和对立.jpg"
-  , "/picture/JK 光＆对立.jpg"
+  , "picture/JK 光＆对立.jpg"
   , "picture/Kou (Arcaea).jpg"
   , "picture/Kou.jpg"
+  , "picture/Partner_aichan.png"
   , "picture/pixivFANBOX.png"
   , "picture/Pokémon盖欧卡.jpg"
   , "picture/rkgk.png"
@@ -14,8 +20,6 @@ const pictureFolder = [
   , "picture/バニー紅ちゃん.jpg"
   , "picture/ポケモン25周年.jpg"
   , "picture/ラティアス & ラティオス.png"
-  , "picture/或る神話の消えた日.jpg"
-  , "picture/花对立.jpg"
 ];
 
 for (let i = 0; i < pictureFolder.length; i++) {
