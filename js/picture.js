@@ -1,5 +1,5 @@
 // 获取图片文件夹路径
-const pictureFolder = "https://singing-shadow.github.io/picture";
+const pictureFolder = "https://singing-shadow.github.io/image";
 
 // 获取包含图片文件的文件夹
 fetch(pictureFolder)
