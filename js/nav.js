@@ -6,7 +6,7 @@ document.getElementById("nav").innerHTML = `
         <li class="number">
             分类
             <ul class="menu">
-                <li> <a href="picture.html">我的图廊</a> </li>
+                <li> <a href="gallery.html">我的图廊</a> </li>
                 <li> <a href="https://www.pixiv.net">pixiv</a> </li>
                 <li> <a href="">教程</a> </li>
                 <li> <a href="">景物</a> </li>
