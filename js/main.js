@@ -6,7 +6,7 @@ document.getElementById("header").innerHTML = `
 document.getElementById("nav").innerHTML = `
     <ul class="numberList">
         <li class="number">
-            <a href="index.html">首页</a>
+            <a href="main.html">首页</a>
         </li>
         <li class="number">
             分类
