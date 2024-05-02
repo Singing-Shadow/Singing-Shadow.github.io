@@ -1,3 +1,8 @@
+// header
+document.getElementById("header").innerHTML = `
+    <b class="title">画廊</b>
+`
+// nav
 document.getElementById("nav").innerHTML = `
     <ul class="numberList">
         <li class="number">
@@ -26,4 +31,8 @@ document.getElementById("nav").innerHTML = `
             </ul>
         </li>
     </ul>
+`
+// footer
+document.getElementById("footer").innerHTML =`
+    <p>&copy; 2024 画廊</p>
 `
