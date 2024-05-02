@@ -36,8 +36,11 @@ header {
 /* 导航栏 */
 nav {
     background-color: #68AB82;
+    /* 滚动页面时固定位置 */
     position: sticky;
+    /* 固定在顶部 */
     top: 0;
+    /* 最高优先级 */
     z-index: 9;
 }
 /* 导航栏选项列表 */
@@ -52,8 +55,8 @@ nav {
     /* 相对自身默认定位 */
     position: relative;
     /* 最小宽度 */
-    min-width: 100px;
-    padding: 5px 0;
+    min-width: 10%;
+    padding: 0.5% 0;
 }
 /* 菜单栏 */
 .menu {
@@ -66,9 +69,9 @@ nav {
     left: 0;
     /* 与上级元素宽度相同 */
     width: 100%;
-    /* 显示优先级 */
+    /* 显示优先级高于默认 */
     z-index: 1;
-    /* 隐藏 */
+    /* 默认隐藏 */
     display: none;
 }
 /* 鼠标划过 - 导航栏选项 */
@@ -120,10 +123,6 @@ nav {
     color: #ffffff;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
 /* 底部 */
 footer {
     background-color: #718C7D;
