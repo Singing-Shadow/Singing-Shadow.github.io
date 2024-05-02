@@ -27,6 +27,7 @@
 body {
     /* 背景色 */
     background-color: #745F6E;
+    font-size: 100%;
 }
 /* 标题 */
 header {
@@ -56,6 +57,8 @@ nav {
     position: relative;
     /* 最小宽度 */
     min-width: 10%;
+    /* 字体大小 */
+    font-size: 100%;
     padding: 0.5% 0;
 }
 /* 菜单栏 */
