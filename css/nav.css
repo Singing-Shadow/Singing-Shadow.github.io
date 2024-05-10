@@ -22,7 +22,7 @@ nav {
     /* 相对自身默认定位 */
     position: relative;
 
-    width: 80rem;
+    width: 30rem;
     /* 最小宽度 */
     min-width: 10%;
     /* 字体大小 */
