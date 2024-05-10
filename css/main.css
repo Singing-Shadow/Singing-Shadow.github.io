@@ -10,12 +10,13 @@
     border: 0;
     /* 移除默认的内边距 */
     padding: 0;
-    
+
     /* 默认字体居中 */
     text-align: center;
     /* 默认字体黑色 */
     color: rgb(0, 0, 0);
 }
+
 /* 标题字体 */
 .title {
     /* 字体大小 */
@@ -23,107 +24,18 @@
     /* 字体间距 */
     letter-spacing: 2px;
 }
+
 /* 背景 */
 body {
     /* 背景色 */
     background-color: #745F6E;
     font-size: 100%;
 }
+
 /* 标题 */
 header {
     background-color: #718C7D;
     padding: 20px;
-}
-/* 导航栏 */
-nav {
-    background-color: #68AB82;
-    /* 滚动页面时固定位置 */
-    position: sticky;
-    /* 固定在顶部 */
-    top: 0;
-    /* 最高优先级 */
-    z-index: 9;
-}
-/* 导航栏选项列表 */
-.numberList {
-    /* 弹性布局 */
-    display: flex;
-    /* 主轴上项目居中对齐 */
-    justify-content: center;
-}
-/* 导航栏选项 */
-.number {
-    /* 相对自身默认定位 */
-    position: relative;
-    /* 最小宽度 */
-    min-width: 10%;
-    /* 字体大小 */
-    font-size: 100%;
-    padding: 0.5% 0;
-}
-/* 菜单栏 */
-.menu {
-    /* 不占空间相对定位 */
-    position: absolute;
-    background-color: #A2B98D;
-    /* 下移 */
-    top: 100%;
-    /* 左移 */
-    left: 0;
-    /* 与上级元素宽度相同 */
-    width: 100%;
-    /* 显示优先级高于默认 */
-    z-index: 1;
-    /* 默认隐藏 */
-    display: none;
-}
-/* 鼠标划过 - 导航栏选项 */
-.number:hover {
-    background-color: #C8CD97;
-}
-/* 鼠标划过 - 导航栏选项字体 */
-.number:hover>a {
-    color: rgb(255, 255, 255);
-}
-/* 鼠标划过 - 菜单栏 */
-.number:hover .menu {
-    /* 显示 */
-    display: block;
-}
-/*  */
-.menu li {
-    /* 相对自身默认定位 */
-    position: relative; 
-    padding: 3px 0;
-}
-/* 鼠标划过 - 菜单栏选项 */
-.menu li:hover {
-    background-color: #C8CD97;
-}
-/* 1 */
-.menu a::before {
-    /* 不占空间相对定位 */
-    position: absolute;
-    content: "";
-    display: block;
-    height: 90%;
-    top: 0;
-    right: 0;
-    width: 0;
-    border-top: 2px solid #ff0000;
-    border-bottom: 2px solid #ff0000;
-    border-left: 2px solid #ff0000;
-    transition: width 0.01s;
-}
-/* 1 */
-.menu li:hover a::before {
-    width: 98%;
-    transition: width 0.01s;
-}
-
-/* 鼠标划过 - 菜单栏选项 */
-.menu li:hover>a{
-    color: #ffffff;
 }
 
 /* 底部 */
