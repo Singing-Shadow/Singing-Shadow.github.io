@@ -50,6 +50,7 @@ nav {
     display: flex;
     /* 主轴上项目居中对齐 */
     justify-content: center;
+    gap: 2rem;
 }
 /* 导航栏选项 */
 .number {
