@@ -20,9 +20,9 @@
 /* 标题字体 */
 .title {
     /* 字体大小 */
-    font-size: 30px;
+    font-size: 3vw;
     /* 字体间距 */
-    letter-spacing: 2px;
+    letter-spacing: 0.2vw;
 }
 
 /* 背景 */
@@ -30,6 +30,18 @@ body {
     /* 背景色 */
     background-color: #745F6E;
     font-size: 100%;
+
+    /* 隐藏滚动条 */
+    /* Firefox */
+    scrollbar-width: none;
+    /* IE and Edge */
+    -ms-overflow-style: none;
+}
+
+/* 自定义滚动条的样式 */
+::-webkit-scrollbar {
+    /* Safari and Chrome */
+    display: none;
 }
 
 /* 标题 */

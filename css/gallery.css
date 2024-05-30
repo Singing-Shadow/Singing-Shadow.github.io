@@ -1,14 +1,23 @@
+/* 画廊容器 */
+#gallery-container {
+    padding: 0 5vw;
+}
+
+/* 画廊容器 */
 #image-container {
     margin: 1%;
 }
 
+/* 画廊 */
 #image {
     /* 图片容器列数 */
     column-count: 4;
     /* 图片容器列间距 */
     column-gap: 1%;
 }
-#image>a {
+
+/* 图片链接 */
+#image a {
     /* 内联块 */
     display: inline-block;
     /* 图片圆角 */
@@ -20,19 +29,37 @@
     aspect-ratio: 1 / 1;
     /* 隐藏溢出部分 */
     overflow: hidden;
-    
-    /* 搭配 “鼠标滑过 - 图片放大” 使用 */
-    /* transition: transform 0.3s ease; */
 }
-/* 鼠标滑过 - 图片放大 */
-/* #image-container img:hover {
-    transform: scale(1.08);
-} */
 
-#image>a>img {
+/* 图片 */
+#image a>img {
     /* 图片容器 */
     width: 100%;
     height: 100%;
     /* 图片自适应容器大小 */
     object-fit: cover;
+}
+
+/* 图片名称 */
+#image p {
+    /* 块显示 */
+    display: block;
+    width: 100%;
+    /* 图片描述容器文本颜色 */
+    color: white;
+
+    /* 字体大小 */
+    font-size: 1.2vw;
+    /* 字体粗细 */
+    font-weight: bold;
+    /* 字体系列 */
+    font-family: "Microsoft YaHei", sans-serif;
+    /* 字符间距 */
+    letter-spacing: 0.2vw;
+    /* 文本溢出省略 */
+    text-overflow: ellipsis;
+    /* 不换行 */
+    white-space: nowrap;
+    /* 内容溢出 */
+    overflow: hidden;
 }

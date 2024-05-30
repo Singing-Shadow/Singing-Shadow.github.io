@@ -33,6 +33,6 @@ document.getElementById("nav").innerHTML = `
     </ul>
 `
 // footer
-document.getElementById("footer").innerHTML =`
+document.getElementById("footer").innerHTML = `
     <p>&copy; 2024 画廊</p>
 `

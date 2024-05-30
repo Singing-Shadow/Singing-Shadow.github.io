@@ -1,42 +1,60 @@
-// 获取图片文件夹路径
-const pictureFolder = [
-    "../picture/紅(Arcaea).jpg"
-  , "../picture/花对立.jpg"
-  , "../picture/或る神話の消えた日.jpg"
-  , "../picture/皮卡丘.jpg"
-  , "../picture/无题.jpg"
-  , "../picture/Arcaea_光.jpg"
-  , "../picture/Arcaea_光2.jpg"
-  , "../picture/Arcaea_光和对立.jpg"
-  , "../picture/JK 光＆对立.jpg"
-  , "../picture/Kou (Arcaea).jpg"
-  , "../picture/Kou.jpg"
-  , "../picture/Partner_aichan.png"
-  , "../picture/pixivFANBOX.png"
-  , "../picture/Pokémon盖欧卡.jpg"
-  , "../picture/rkgk.png"
-  , "../picture/SHE - BLACK RAT 米山舞.jpg"
-  , "../picture/カノンとラティアス.png"
-  , "../picture/バニー紅ちゃん.jpg"
-  , "../picture/ポケモン25周年.jpg"
-  , "../picture/ラティアス & ラティオス.png"
-];
+// 定义 JSON 文件的相对路径
+const filePath = "../json/image.json";
 
-for (let i = 0; i < pictureFolder.length; i++) {
-  // 创建图片链接元素
-  const linkElement = document.createElement("a");
-  linkElement.href = pictureFolder[i];
-  linkElement.alt = "图片" + (i + 1);
-  linkElement.target = "_blank";
+// 使用 Fetch API 获取 JSON 文件
+fetch(filePath)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("网络响应不正常");
+    }
+    return response.json();
+  })
+  .then(pictureFolder => {
+    // 遍历JSON数据中的数组
+    for (let i = 0; i < pictureFolder.length; i++) {
+      // 创建图片展示区域的容器元素
+      const containerElement = document.createElement("div");
 
-  // 创建图片元素
-  const imgElement = document.createElement("img");
-  imgElement.src = pictureFolder[i];
-  imgElement.alt = "图片" + (i + 1);
+      // 创建图片链接元素
+      const linkElement = document.createElement("a");
+      linkElement.href = pictureFolder[i].href;
+      linkElement.target = "_blank";
 
-  // 将图片元素添加到链接元素中
-  linkElement.appendChild(imgElement);
+      // 创建图片元素
+      const imgElement = document.createElement("img");
+      imgElement.src = pictureFolder[i].href;
+      imgElement.alt = pictureFolder[i].name;
 
-  // 将链接元素添加到图片展示区域的容器元素中
-  document.getElementById("image").appendChild(linkElement).appendChild(imgElement);
-}
+      // 创建图片名称
+      const imgNameElement = document.createElement("p");
+      imgNameElement.textContent = pictureFolder[i].name;
+
+      // 将图片元素添加到链接元素中
+      linkElement.appendChild(imgElement);
+
+      // 将链接元素添加到图片展示区域的容器元素中
+      containerElement.appendChild(linkElement);
+      // 将图片名称元素添加到图片展示区域的容器元素中
+      containerElement.appendChild(imgNameElement);
+
+      // 将容器元素添加到图片展示区域中
+      document.getElementById("image").appendChild(containerElement);
+
+    }
+  })
+  .catch(error => {
+    console.error("Error fetching JSON:", error);
+  });
+
+
+// 创建图片展示区域
+/*
+  <div>
+    <a href="" target="">
+      <img src="" alt="">
+    </a>
+    <p>
+      textContent
+    </p>
+  </div>
+*/
