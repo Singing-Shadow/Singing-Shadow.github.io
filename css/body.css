@@ -20,9 +20,9 @@
 /* 标题字体 */
 .title {
     /* 字体大小 */
-    font-size: 3vw;
+    font-size: 180%;
     /* 字体间距 */
-    letter-spacing: 0.2vw;
+    letter-spacing: 2px;
 }
 
 /* 背景 */
