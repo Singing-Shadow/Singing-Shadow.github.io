@@ -1,11 +1,6 @@
-/* 画廊容器 */
+/* 画廊容器容器 */
 #gallery-container {
-    padding: 0 5vw;
-}
-
-/* 画廊容器 */
-#image-container {
-    margin: 1%;
+    padding: 1% 5vw;
 }
 
 /* 画廊 */
@@ -40,22 +35,17 @@
     object-fit: cover;
 }
 
-/* 图片名称 */
+/* 图片信息 */
 #image p {
     /* 块显示 */
     display: block;
     width: 100%;
-    /* 图片描述容器文本颜色 */
-    color: white;
 
     /* 字体大小 */
-    font-size: 1.2vw;
-    /* 字体粗细 */
-    font-weight: bold;
-    /* 字体系列 */
-    font-family: "Microsoft YaHei", sans-serif;
-    /* 字符间距 */
-    letter-spacing: 0.2vw;
+    font-size: 95%;
+    /* 字体居左 */
+    text-align: left;
+    
     /* 文本溢出省略 */
     text-overflow: ellipsis;
     /* 不换行 */

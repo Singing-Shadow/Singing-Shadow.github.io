@@ -28,6 +28,12 @@ fetch(filePath)
       // 创建图片名称
       const imgNameElement = document.createElement("p");
       imgNameElement.textContent = pictureFolder[i].name;
+      // 字体粗细
+      imgNameElement.style.fontWeight = "bold";
+
+      // 创建图片作者
+      const imgAuthorElement = document.createElement("p");
+      imgAuthorElement.textContent = pictureFolder[i].author;
 
       // 将图片元素添加到链接元素中
       linkElement.appendChild(imgElement);
@@ -36,6 +42,8 @@ fetch(filePath)
       containerElement.appendChild(linkElement);
       // 将图片名称元素添加到图片展示区域的容器元素中
       containerElement.appendChild(imgNameElement);
+      // 将图片作者元素添加到图片展示区域的容器元素中
+      containerElement.appendChild(imgAuthorElement);
 
       // 将容器元素添加到图片展示区域中
       document.getElementById("image").appendChild(containerElement);
@@ -53,6 +61,9 @@ fetch(filePath)
     <a href="" target="">
       <img src="" alt="">
     </a>
+    <p style="bold">
+      textContent
+    </p>
     <p>
       textContent
     </p>

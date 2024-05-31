@@ -1,119 +1,142 @@
 [
     {
-        "name": "紅(Arcaea)",
-        "href": "../picture/紅(Arcaea).jpg",
+        "name": "Tempest",
+        "href": "../picture/Tempest.jpg",
         "class": "Arcaea",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "Arcaea",
+            "対立(Arcaea)",
+            "对立(Arcaea)"
         ]
     },
     {
-        "name": "花对立",
-        "href": "../picture/花对立.jpg",
+        "name": "Aixum 対立",
+        "href": "../picture/Aixum 対立.jpg",
         "class": "Arcaea",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "Arcaea",
+            "対立(Arcaea)",
+            "对立(Arcaea)"
         ]
     },
     {
         "name": "或る神話の消えた日",
         "href": "../picture/或る神話の消えた日.jpg",
         "class": "Pokemon",
-        "editor": "待填写",
+        "author": "かんな",
         "label": [
-            "no1",
-            "no2"
+            "精灵宝可梦",
+            "giratina",
+            "Arceus",
+            "シンオウ神話",
+            "なにこれ悲しい",
+            "宝可梦5000收藏",
+            "what is this pain",
+            "まさかの伏線",
+            "あかいくさり"
         ]
     },
     {
-        "name": "皮卡丘",
-        "href": "../picture/皮卡丘.jpg",
+        "name": "rkgk",
+        "href": "../picture/rkgk.jpg",
         "class": "Pokemon",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "涂鸦",
+            "精灵宝可梦"
         ]
     },
     {
-        "name": "无题",
-        "href": "../picture/无题.jpg",
-        "class": "Arcaea",
-        "editor": "待填写",
+        "name": "ポケモン 無題",
+        "href": "../picture/ポケモン 無題.jpg",
+        "class": "Pokemon",
+        "author": "雪降つゆ",
         "label": [
-            "no1",
-            "no2"
+            "精灵宝可梦",
+            "口袋妖怪",
+            "Bianca (Pokémon)",
+            "latias",
+            "Pokémon 1000+ bookmarks"
         ]
     },
     {
-        "name": "Arcaea_光",
-        "href": "../picture/Arcaea_光.jpg",
+        "name": "光",
+        "href": "../picture/光.jpg",
         "class": "Arcaea",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "SD",
+            "Arcaea"
         ]
     },
     {
-        "name": "Arcaea_光2",
-        "href": "../picture/Arcaea_光2.jpg",
+        "name": "Arcaea",
+        "href": "../picture/Arcaea (2).jpg",
         "class": "Arcaea",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "女孩子",
+            "Arcaea",
+            "Hikari (Arcaea)",
+            "Arcaea 1000收藏"
         ]
     },
     {
-        "name": "Arcaea_光和对立",
-        "href": "../picture/Arcaea_光和对立.jpg",
+        "name": "Arcaea",
+        "href": "../picture/Arcaea.jpg",
         "class": "Arcaea",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "女孩子",
+            "Arcaea",
+            "Arcaea 1000收藏",
+            "Hikari (Arcaea)"
         ]
     },
     {
-        "name": "JK_光＆对立",
-        "href": "../picture/JK_光＆对立.jpg",
+        "name": "JK 光＆対立",
+        "href": "../picture/JK 光＆対立.jpg",
         "class": "Arcaea",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "JK",
+            "Arcaea"
         ]
     },
     {
-        "name": "Arcaea_Kou",
-        "href": "../picture/Arcaea_Kou.jpg",
+        "name": "紅",
+        "href": "../picture/紅.jpg",
         "class": "Arcaea",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "女孩子",
+            "樱",
+            "Kou (Arcaea)",
+            "Arcaea",
+            "系带过膝长靴",
+            "太美了",
+            "Arcaea 1000收藏"
         ]
     },
     {
         "name": "Kou",
         "href": "../picture/Kou.jpg",
         "class": "Arcaea",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "Arcaea",
+            "Kou (Arcaea)",
+            "Arcaea 1000收藏",
+            "Peach hair & green eyes"
         ]
     },
     {
         "name": "紅",
         "href": "../picture/紅.png",
         "class": "Arcaea",
-        "editor": "MiyU",
+        "author": "MiyU",
         "label": [
             "女孩子",
             "Arcaea",
@@ -122,83 +145,117 @@
         ]
     },
     {
-        "name": "pixivFANBOX",
-        "href": "../picture/pixivFANBOX.png",
-        "class": "Pixiv",
-        "editor": "米山舞",
+        "name": "VISIONS",
+        "href": "../picture/VISIONS.png",
+        "class": "原创",
+        "author": "Mika Pikazo",
         "label": [
-            "no1",
-            "no2"
+            "原创",
+            "异色瞳",
+            "极彩色的魔术师",
+            "rainbow hair",
+            "Many",
+            "女孩子",
+            "あなた様でしたか",
+            "花和女孩子",
+            "原创50000收藏"
         ]
     },
     {
         "name": "Pokémon盖欧卡",
         "href": "../picture/Pokémon盖欧卡.jpg",
         "class": "Pokemon",
-        "editor": "待填写",
+        "author": "shank",
         "label": [
-            "no1",
-            "no2"
+            "原创",
+            "风景",
+            "手绘",
+            "同人",
+            "精灵宝可梦",
+            "神奇宝贝",
+            "盖欧卡",
+            "Pokémon",
+            "演習"
         ]
     },
     {
         "name": "rkgk",
         "href": "../picture/rkgk.png",
         "class": "其它",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "女孩子",
+            "Arcaea"
         ]
     },
     {
-        "name": "SHE - BLACK RAT 米山舞",
-        "href": "../picture/SHE - BLACK RAT 米山舞.jpg",
-        "class": "Arcaea",
-        "editor": "米山舞",
+        "name": "SHE - BLACK RAT",
+        "href": "../picture/SHE - BLACK RAT.jpg",
+        "class": "原创",
+        "author": "米山舞",
         "label": [
-            "no1",
-            "no2"
+            "原创",
+            "solo exhibition",
+            "凝视",
+            "tiered skirt",
+            "裸足",
+            "原创40000收藏"
         ]
     },
     {
         "name": "カノンとラティアス",
         "href": "../picture/カノンとラティアス.png",
         "class": "Pokemon",
-        "editor": "待填写",
+        "author": "電竜ライ",
         "label": [
-            "no1",
-            "no2"
+            "精灵宝可梦",
+            "女孩子",
+            "latias",
+            "Latios",
+            "水の都",
+            "Bianca (Pokémon)",
+            "Pokémon Heroes"
         ]
     },
     {
         "name": "バニー紅ちゃん",
         "href": "../picture/バニー紅ちゃん.jpg",
         "class": "Arcaea",
-        "editor": "待填写",
+        "author": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "兔女郎",
+            "Arcaea",
+            "系带过膝长靴",
+            "Kou (Arcaea)"
         ]
     },
     {
         "name": "ポケモン25周年",
         "href": "../picture/ポケモン25周年.jpg",
         "class": "Pokemon",
-        "editor": "待填写",
+        "author": "TM",
         "label": [
-            "no1",
-            "no2"
+            "精灵宝可梦",
+            "Pokémon 25th Anniversary",
+            "Female Protagonist (Pokémon)",
+            "what is this happiness",
+            "皮卡丘",
+            "Nintendo Girl",
+            "宝可梦×人类",
+            "宝可梦5000收藏",
+            "主角♀"
         ]
     },
     {
-        "name": "ラティアス & ラティオス",
-        "href": "../picture/ラティアス & ラティオス.png",
+        "name": "兄妹",
+        "href": "../picture/兄妹.png",
         "class": "Pokemon",
-        "editor": "待填写",
+        "author": "orz",
         "label": [
-            "no1",
-            "no2"
+            "精灵宝可梦",
+            "latias",
+            "Latios",
+            "Pokémon 1000+ bookmarks"
         ]
     }
 ]
