@@ -2,8 +2,18 @@
 @font-face {
     font-family: "微软雅黑";
     src: url("../font/微软雅黑.ttf");
-  }
-  
+}
+
+@font-face {
+    font-family: "微软雅黑";
+    src: url("../font/微软雅黑\ 粗体.ttc");
+}
+
+@font-face {
+    font-family: "微软雅黑";
+    src: url("../font/微软雅黑\ Light.ttc");
+}
+
 /* 全局设定 */
 * {
     /* 移除文本/链接的下划线效果 */
@@ -53,7 +63,8 @@ body {
 }
 
 /* 标题、底部 */
-header, footer {
+header,
+footer {
     background-color: #FF9999;
     padding: 20px;
 }
