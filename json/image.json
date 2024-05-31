@@ -110,13 +110,15 @@
         ]
     },
     {
-        "name": "Partner_aichan",
-        "href": "../picture/Partner_aichan.png",
+        "name": "紅",
+        "href": "../picture/紅",
         "class": "Arcaea",
-        "editor": "待填写",
+        "editor": "MiyU",
         "label": [
-            "no1",
-            "no2"
+            "女孩子",
+            "Arcaea",
+            "Kou (Arcaea)",
+            "系带过膝长靴"
         ]
     },
     {
