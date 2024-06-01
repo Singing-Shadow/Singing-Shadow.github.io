@@ -1,8 +1,5 @@
 测试中..
-nav.css
-body.css
-gallery.css
-gallery.js
-image.json
-font
-微软雅黑.ttf
+
+学习搭建自己的网页
+
+学习对象：Pixiv
