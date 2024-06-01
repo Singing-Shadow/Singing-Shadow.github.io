@@ -66,18 +66,19 @@ body {
 header,
 footer {
     background-color: #FF9999;
-    padding: 20px;
+    padding: 3vh;
     cursor: default;
 }
 
 /* 主体 */
 main {
     padding: 1% 5vw;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 /* 针对非PC设备 */
 @media only screen and (max-width: 768px) {
+
     /* 全局设定 */
     * {
         /* 字体系列 */

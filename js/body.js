@@ -22,9 +22,8 @@ document.getElementById("nav").innerHTML = `
         <li class="number">
             我的
             <ul class="menu">
-                <li> <a href="https://github.com/Singing-Shadow">我的GitHub</a> </li>
-                <li> <a href="https://dylanyu233.rbind.io/">好友博客</a> </li>
-                <li> <a href="https://github.com/MrRightXingYue">好友GitHub</a> </li>
+                <li> <a href="https://dylanyu233.rbind.io/">友情链接1</a> </li>
+                <li> <a href="https://github.com/MrRightXingYue">友情链接2</a> </li>
                 <li> <a href="home.html">我的</a> </li>
             </ul>
         </li>
@@ -36,11 +35,11 @@ document.getElementById("footer").innerHTML = `
 `
 
 // 禁止拖动
-document.addEventListener('dragstart', function(event) {
+document.addEventListener('dragstart', function (event) {
     event.preventDefault();
 });
 
 // 禁止右键菜单
-document.addEventListener('contextmenu', function(event) {
+document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
 });
