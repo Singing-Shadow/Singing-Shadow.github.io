@@ -1,17 +1,17 @@
 /* 字体导入 */
 @font-face {
     font-family: "微软雅黑";
-    src: url("../font/微软雅黑.ttf");
+    src: url("../font/微软雅黑.ttc")format('truetype');
 }
 
 @font-face {
     font-family: "微软雅黑 粗体";
-    src: url("../font/微软雅黑\ 粗体.ttc");
+    src: url("../font/微软雅黑\ 粗体.ttc")format('truetype');
 }
 
 @font-face {
     font-family: "微软雅黑 Light";
-    src: url("../font/微软雅黑\ Light.ttc");
+    src: url("../font/微软雅黑\ Light.ttc")format('truetype');
 }
 
 /* 全局设定 */
@@ -67,6 +67,12 @@ header,
 footer {
     background-color: #FF9999;
     padding: 20px;
+    cursor: default;
+}
+
+/* 主体 */
+main {
+    padding: 1% 5vw;
 }
 
 /* 针对竖屏设备 */

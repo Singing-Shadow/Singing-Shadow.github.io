@@ -1,0 +1,57 @@
+/* 图片信息 */
+#imageInfo {
+    /* 容器圆角 */
+    border-radius: 1%;
+    /* 隐藏溢出部分 */
+    overflow: hidden;
+
+    background-color: #ffffff;
+}
+
+/* 图片 */
+#image {
+    /* 留白 */
+    padding: 0 10%;
+    background-color: #fafafa;
+}
+
+/* 图片 */
+#image>img {
+    display: block;
+    width: 100%;
+}
+
+/* 信息 */
+#info {
+    /* 弹性布局 */
+    display: flex;
+    /* 主轴垂直向下 */
+    flex-direction: column;
+    /* 水平居左 */
+    align-items: flex-start;
+
+    padding: 2% 10%;
+    background-color: #FF9999;
+}
+
+/* 信息内容容器 */
+#info>* {
+    padding: 1% 0;
+}
+
+/* 标签组 */
+#label {
+    /* 弹性布局 */
+    display: flex;
+    /* 水平居左 */
+    justify-content: flex-start;
+    /* 换行 */
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
+/* 标签 */
+#label>span {
+    margin-right: 2%;
+}

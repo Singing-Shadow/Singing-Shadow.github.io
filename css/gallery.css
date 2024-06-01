@@ -1,18 +1,13 @@
-/* 画廊容器容器 */
-#gallery-container {
-    padding: 1% 5vw;
-}
-
 /* 画廊 */
-#image {
+#gallery {
     /* 图片容器列数 */
     column-count: 4;
     /* 图片容器列间距 */
     column-gap: 1%;
 }
 
-/* 图片链接 */
-#image a {
+/* 图片容器 */
+#gallery div {
     /* 内联块 */
     display: inline-block;
     /* 图片圆角 */
@@ -24,10 +19,13 @@
     aspect-ratio: 1 / 1;
     /* 隐藏溢出部分 */
     overflow: hidden;
+
+    /* 鼠标悬停 */
+    cursor: help;
 }
 
 /* 图片 */
-#image a>img {
+#gallery div>img {
     /* 图片容器 */
     width: 100%;
     height: 100%;
@@ -36,7 +34,7 @@
 }
 
 /* 图片信息 */
-#image p {
+#gallery p {
     /* 块显示 */
     display: block;
     width: 100%;
@@ -59,7 +57,7 @@
 @media only screen and (orientation: portrait) {
 
     /* 画廊 */
-    #image {
+    #gallery {
         /* 图片容器列数 */
         column-count: 2;
         /* 图片容器列间距 */
@@ -67,7 +65,7 @@
     }
 
     /* 图片信息 */
-    #image p {
+    #gallery p {
         /* 字体大小 */
         font-size: 80%;
     }

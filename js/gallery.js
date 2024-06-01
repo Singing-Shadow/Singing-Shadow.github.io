@@ -12,41 +12,44 @@ fetch(filePath)
   .then(pictureFolder => {
     // 遍历JSON数据中的数组
     for (let i = 0; i < pictureFolder.length; i++) {
-      // 创建图片展示区域的容器元素
+      // 创建图片信息展示区域的容器元素
       const containerElement = document.createElement("div");
 
-      // 创建图片链接元素
-      const linkElement = document.createElement("a");
-      linkElement.href = pictureFolder[i].href;
-      linkElement.target = "_blank";
+      // 创建图片展示区域的容器元素
+      const imageContainerElement = document.createElement("div");
 
       // 创建图片元素
       const imgElement = document.createElement("img");
       imgElement.src = pictureFolder[i].href;
       imgElement.alt = pictureFolder[i].name;
+      imgElement.addEventListener("click", () => {
+        const src = pictureFolder[i].href;
+        const url = `imageInfo.html?src=${encodeURIComponent(src)}`;
+        window.open(url, '_blank');
+      });
 
-      // 创建图片名称
+      // 将图片元素添加到图片展示区域的容器元素中
+      imageContainerElement.appendChild(imgElement);
+
+      // 创建图片名称元素
       const imgNameElement = document.createElement("p");
       imgNameElement.textContent = pictureFolder[i].name;
       // 字体粗细
       imgNameElement.style.fontWeight = "bold";
 
-      // 创建图片作者
+      // 创建图片作者元素
       const imgAuthorElement = document.createElement("p");
       imgAuthorElement.textContent = pictureFolder[i].author;
 
-      // 将图片元素添加到链接元素中
-      linkElement.appendChild(imgElement);
-
-      // 将链接元素添加到图片展示区域的容器元素中
-      containerElement.appendChild(linkElement);
-      // 将图片名称元素添加到图片展示区域的容器元素中
+      // 将图片展示区域的容器元素添加到图片信息展示区域的容器元素中
+      containerElement.appendChild(imageContainerElement);
+      // 将图片名称元素添加到图片信息展示区域的容器元素中
       containerElement.appendChild(imgNameElement);
-      // 将图片作者元素添加到图片展示区域的容器元素中
+      // 将图片作者元素添加到图片信息展示区域的容器元素中
       containerElement.appendChild(imgAuthorElement);
 
       // 将容器元素添加到图片展示区域中
-      document.getElementById("image").appendChild(containerElement);
+      document.getElementById("gallery").appendChild(containerElement);
 
     }
   })
@@ -58,9 +61,9 @@ fetch(filePath)
 // 创建图片展示区域
 /*
   <div>
-    <a href="" target="">
+    <div>
       <img src="" alt="">
-    </a>
+    </div>
     <p style="bold">
       textContent
     </p>
