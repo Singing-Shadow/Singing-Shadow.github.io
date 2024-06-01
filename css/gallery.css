@@ -63,7 +63,7 @@
         /* 图片容器列数 */
         column-count: 2;
         /* 图片容器列间距 */
-        column-gap: 1%;
+        column-gap: 2%;
     }
 
     /* 图片信息 */
