@@ -30,7 +30,7 @@
     /* 默认字体居中 */
     text-align: center;
     /* 字体系列 */
-    font-family: "微软雅黑", "微软雅黑 Light", "Microsoft YaHei", "Microsoft YaHei Light";
+    font-family: "微软雅黑", "Microsoft YaHei", "微软雅黑 Light", "Microsoft YaHei Light";
     /* 字符间距 */
     letter-spacing: 0.2vw;
     /* 默认字体黑色 */
@@ -67,4 +67,13 @@ header,
 footer {
     background-color: #FF9999;
     padding: 20px;
+}
+
+/* 针对竖屏设备 */
+@media only screen and (orientation: portrait) {
+    /* 全局设定 */
+    * {
+        /* 字体系列 */
+        font-family: "微软雅黑 Light", "Microsoft YaHei Light", "微软雅黑", "Microsoft YaHei";
+    }
 }
