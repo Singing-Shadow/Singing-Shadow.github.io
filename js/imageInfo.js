@@ -71,6 +71,7 @@ fetch(filePath)
     // 创建图片标签元素
     const imgLabelElement = document.createElement("div");
     imgLabelElement.id = "label";
+    imgLabelElement.style.fontSize = "80%";
     pictureFolder[i].label.forEach(label => {
       const spanElement = document.createElement('span');
       spanElement.textContent = "#" + label;

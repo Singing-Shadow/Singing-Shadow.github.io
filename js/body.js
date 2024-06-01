@@ -39,3 +39,8 @@ document.getElementById("footer").innerHTML = `
 document.addEventListener('dragstart', function(event) {
     event.preventDefault();
 });
+
+// 禁止右键菜单
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
