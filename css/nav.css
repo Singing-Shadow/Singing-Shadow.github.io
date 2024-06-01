@@ -31,7 +31,8 @@ nav {
 }
 
 /* 鼠标划过 - 导航栏选项字体 */
-.number:hover, .number:hover>a {
+.number:hover,
+.number:hover>a {
     color: #ffffff;
     cursor: default;
 }
@@ -85,4 +86,12 @@ nav a {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+/* 针对非PC设备 */
+@media only screen and (max-width: 768px) {
+    /* 导航栏选项 */
+    .number {
+        padding: 1% 0;
+    }
 }
