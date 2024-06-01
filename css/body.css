@@ -70,7 +70,7 @@ footer {
 }
 
 /* 针对竖屏设备 */
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 768px) {
     /* 全局设定 */
     * {
         /* 字体系列 */
