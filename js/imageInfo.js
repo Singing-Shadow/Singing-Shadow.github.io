@@ -1,18 +1,16 @@
 // 定义一个函数，用于解析URL中的查询参数
 function getQueryParams() {
-  // 存储解析出来的查询参数
-  const params = {};
   // 获取URL中的查询字符串，并去掉开头的 ? 字符
   const queryString = window.location.search.substring(1);
-  // 匹配查询字符串中的 key=value 对
-  const regex = /([^&=]+)=([^&]*)/g;
-  // 存储正则表达式的匹配结果
-  let match;
-  // 逐个匹配并解析查询字符串中的 key=value 对
-  while ((match = regex.exec(queryString))) {
-    params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+  // 存储解析出来的查询参数
+  const params = {};
+  // 获取查询参数的键值对
+  // 将 id 转换为整数
+  // 得到最终值
+  if (queryString) {
+    params.id = parseInt(decodeURIComponent(queryString.split('=')[1]), 10);
   }
-  // 匹配到的参数名和参数值进行解码，并存储到 params 对象中
+  // 返回 params 对象
   return params;
 }
 
@@ -28,14 +26,10 @@ fetch(filePath)
     return response.json();
   })
   .then(pictureFolder => {
-    // 遍历JSON数据中的数组
-    let i = 0;
+    // 解析URL中的查询参数
     const params = getQueryParams();
-    for (; i < pictureFolder.length; i++) {
-      if (pictureFolder[i].href === params.src) {
-        break;
-      }
-    }
+    // 并从json文件中找到对应的图片序号
+    let i = params.id - 1;
     // 创建图片信息展示区域的容器元素
     const containerElement = document.createElement("div");
 

@@ -25,8 +25,8 @@ fetch(filePath)
       imgElement.src = pictureFolder[i].href;
       imgElement.alt = pictureFolder[i].name;
       imgElement.addEventListener("click", () => {
-        const src = pictureFolder[i].href;
-        const url = `imageInfo.html?src=${encodeURIComponent(src)}`;
+        const id = pictureFolder[i].id;
+        const url = `imageInfo.html?id=${encodeURIComponent(id)}`;
         window.open(url, '_blank');
       });
 
