@@ -14,9 +14,11 @@ fetch(filePath)
     for (let i = 0; i < pictureFolder.length; i++) {
       // 创建图片信息展示区域的容器元素
       const containerElement = document.createElement("div");
+      containerElement.className = "imageInfo-container";
 
       // 创建图片展示区域的容器元素
       const imageContainerElement = document.createElement("div");
+      imageContainerElement.className = "image-container";
 
       // 创建图片元素
       const imgElement = document.createElement("img");
