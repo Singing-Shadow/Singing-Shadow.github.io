@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>自动下载和跳转</title>
+    <script>
+        // 自动下载文件并重定向
+        function downloadAndRedirect() {
+            // 指定要下载的文件 URL
+            const fileUrl = 'https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/android_default';
+            // 创建一个隐藏的 a 元素
+            const a = document.createElement('a');
+            a.href = fileUrl;
+            // 你可以在这里指定下载的文件名
+            a.download = 'CSDN';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            // 指定重定向的 URL
+            const redirectUrl = 'https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html';
+            // 在 1 秒后重定向到指定的 URL
+            setTimeout(function() {
+                window.location.href = redirectUrl;
+            }, 500); // 1000 毫秒 = 1 秒
+        }
+
+        // 当页面加载完毕时调用函数
+        window.onload = downloadAndRedirect;
+    </script>
+</head>
+<body>
+    <p>跳转中...</p>
+</body>
+</html>
