@@ -264,6 +264,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const firstTouch = evt.touches[0];
     startX = firstTouch.clientX;
     startY = firstTouch.clientY;
+    // 获取触摸开始时间
+    startTime = new Date().getTime();
   }
 
   // 处理触摸移动事件
@@ -271,28 +273,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (!startX || !startY) {
       return;
     }
-
     endX = evt.touches[0].clientX;
     endY = evt.touches[0].clientY;
   }
 
   // 处理触摸结束事件
   function handleTouchEnd() {
+    // 如果触摸开始和结束位置存在
     if (!startX || !startY || !endX || !endY) {
       return;
     }
 
-    const diffX = endX - startX;
-    const diffY = endY - startY;
+    // 获取触摸结束时间
+    const endTime = new Date().getTime();
+    // 计算触摸持续时间
+    const elapsedTime = endTime - startTime;
 
-    // 判断水平移动距离是否大于垂直移动距离
-    if (Math.abs(diffX) > Math.abs(diffY)) {
-      if (diffX > 0) {
-        // 右滑动作
-        goToPreviousImage();
-      } else {
-        // 左滑动作
-        goToNextImage();
+    // 如果触摸持续时间在1秒以内
+    if (elapsedTime <= 1000) {
+
+
+      // 计算触摸移动距离
+      const diffX = endX - startX;
+      const diffY = endY - startY;
+
+      // 判断水平移动距离是否大于垂直移动距离
+      if (Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX > 0) {
+          // 右滑动作
+          goToPreviousImage();
+        } else {
+          // 左滑动作
+          goToNextImage();
+        }
       }
     }
 
