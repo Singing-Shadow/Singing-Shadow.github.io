@@ -8,19 +8,22 @@
 
 /* 图片容器 */
 #gallery .image-container {
+    position: relative;
     /* 内联块 */
     display: inline-block;
     /* 图片圆角 */
     border-radius: 4%;
+
     /* 图片上级容器 */
     width: 100%;
-    margin: 2% 0;
     /* 限定容器宽高比为 1 / 1 */
     aspect-ratio: 1 / 1;
+    margin: 2% 0;
+
     /* 隐藏溢出部分 */
     overflow: hidden;
 
-    /* 鼠标悬停 */
+    /* 鼠标指针 */
     cursor: help;
 }
 
@@ -31,6 +34,54 @@
     height: 100%;
     /* 图片自适应容器大小 */
     object-fit: cover;
+}
+
+/* 点赞按钮边框 */
+.love-button-background {
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+
+    /* 图片容器 */
+    width: 12%; 
+    height: auto;
+
+    /* 为了兼容 */
+    -webkit-mask: url('../picture/其它/love-red.svg') no-repeat center / contain;
+    /* 图片蒙版 */
+    mask: url('../picture/其它/love-red.svg') no-repeat center / contain;
+
+    background-color: #ffffff;
+    /* 鼠标指针 */
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* 点赞按钮 */
+.love-button {
+    /* 图片容器 */
+    width: 100%;
+    /* 限定容器宽高比为 1 / 1 */
+    aspect-ratio: 1 / 1;
+    
+    /* 为了兼容 */
+    -webkit-mask: url('../picture/其它/love.svg') no-repeat center / contain;
+    /* 图片蒙版 */
+    mask: url('../picture/其它/love.svg') no-repeat center / contain;
+
+    background-color: #000000;
+    /* 鼠标指针 */
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* 点赞按钮切换 */
+.loved {
+    /* 为了兼容 */
+    -webkit-mask: url('../picture/其它/love-red.svg') no-repeat center / contain;
+    /* 图片蒙版 */
+    mask: url('../picture/其它/love-red.svg') no-repeat center / contain;
+    background-color: red;
 }
 
 /* 图片信息 */

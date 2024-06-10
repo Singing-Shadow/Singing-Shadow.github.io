@@ -39,6 +39,55 @@
     padding: 1% 0;
 }
 
+/* 设置栏 */
+#setting {
+    /* 弹性布局 */
+    display: flex;
+    /* 水平居右 */
+    justify-content: flex-end;
+    /* 换行 */
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 4vh;
+}
+
+/* 设置栏选项 */
+#setting * {
+    margin: 0 1%;
+    /* 图片容器 */
+    height: 100%; 
+    /* 限定容器宽高比为 1 / 1 */
+    aspect-ratio: 1 / 1;
+}
+
+/* 点赞按钮 */
+.love {
+    /* 为了兼容 */
+    -webkit-mask: url('../picture/其它/love.svg') no-repeat center / contain;
+    /* 图片蒙版 */
+    mask: url('../picture/其它/love.svg') no-repeat center / contain;
+    background-color: #000000;
+}
+
+/* 点赞按钮切换 */
+.loved {
+    /* 为了兼容 */
+    -webkit-mask: url('../picture/其它/love-red.svg') no-repeat center / contain;
+    /* 图片蒙版 */
+    mask: url('../picture/其它/love-red.svg') no-repeat center / contain;
+    background-color: #ff0000;
+}
+
+/* 下载按钮 */
+#download {
+    /* 为了兼容 */
+    -webkit-mask: url('../picture/其它/download.svg') no-repeat center / contain;
+    /* 图片蒙版 */
+    mask: url('../picture/其它/download.svg') no-repeat center / contain;
+    background-color: #000000;
+}
+
 /* 标签组 */
 #label {
     /* 弹性布局 */

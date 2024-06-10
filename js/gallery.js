@@ -30,8 +30,26 @@ fetch(filePath)
         window.open(url, '_blank');
       });
 
+      // 创建爱心按钮背景元素
+      const loveButtonbackground = document.createElement("div");
+      loveButtonbackground.classList.add("love-button-background");
+
+      // 创建爱心按钮元素
+      const loveButton = document.createElement("div");
+      loveButton.classList.add("love-button");
+      loveButton.addEventListener("click", () => {
+        // 切换爱心按钮的样式
+        loveButton.classList.toggle("loved");
+      });
+
+      // 将爱心按钮元素添加到爱心按钮背景元素中
+      loveButtonbackground.appendChild(loveButton);
+
       // 将图片元素添加到图片展示区域的容器元素中
       imageContainerElement.appendChild(imgElement);
+
+      // 将爱心按钮边框元素添加到图片展示区域的容器元素中
+      imageContainerElement.appendChild(loveButtonbackground);
 
       // 创建图片名称元素
       const imgNameElement = document.createElement("p");
