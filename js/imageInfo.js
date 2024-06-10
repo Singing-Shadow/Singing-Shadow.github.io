@@ -32,108 +32,13 @@ fetch(filePath)
     const params = getQueryParams();
     // 并从json文件中找到对应的图片序号
     let i = params.id - 1;
-
     // 获取相应的图片信息
     JSONFolder = pictureFolder;
 
-    // 创建图片信息展示区域的容器元素
-    const containerElement = document.createElement("div");
-
-    // 创建图片展示区域的容器元素
-    const imageContainerElement = document.createElement("div");
-    imageContainerElement.id = "image";
-
-    // 创建图片元素
-    const imgElement = document.createElement("img");
-    imgElement.src = pictureFolder[i].href;
-    imgElement.alt = pictureFolder[i].name;
-
-    // 将图片元素添加到链接元素中
-    imageContainerElement.appendChild(imgElement);
-
-    // 创建信息展示区域的容器元素
-    const infoContainerElement = document.createElement("div");
-    infoContainerElement.id = "info";
-
-    // 创建图片设置区域
-    const imgsetting = document.createElement("div");
-    imgsetting.id = "setting";
-
-    // 创建爱心按钮元素
-    const loveButton = document.createElement("div");
-    loveButton.classList.toggle("love");
-    loveButton.addEventListener("click", () => {
-      // 切换爱心按钮的样式
-      loveButton.classList.toggle("loved");
-    });
-
-    // 创建下载按钮元素
-    const downloadButton = document.createElement("div");
-    downloadButton.id = "download";
-    downloadButton.addEventListener("click", () => {
-      // 弹出密码输入框
-      const password = prompt("请输入下载密码:");
-
-      // 正确密码
-      const correctPassword = "616";
-      // 检查密码是否正确
-      if (password === correctPassword) {
-        // 密码正确，执行下载操作
-        const a = document.createElement("a");
-        a.href = pictureFolder[i].href;
-        a.download = pictureFolder[i].name;
-        a.click();
-      } else {
-        // 密码错误，显示提示信息
-        alert("密码错误，无法下载。");
-      }
-    });
-
-    // 将爱心按钮边框元素添加到图片设置区域中
-    imgsetting.appendChild(loveButton);
-    // 将下载按钮元素添加到图片设置区域中
-    imgsetting.appendChild(downloadButton);
-
-    // 创建图片名称元素
-    const imgNameElement = document.createElement("div");
-    imgNameElement.id = "name";
-    imgNameElement.style.fontSize = "120%";
-    imgNameElement.style.fontWeight = "bold";
-    imgNameElement.textContent = pictureFolder[i].name;
-
-    // 创建图片作者元素
-    const imgAuthorElement = document.createElement("div");
-    imgAuthorElement.id = "author";
-    imgAuthorElement.style.fontWeight = "bold";
-    imgAuthorElement.textContent = pictureFolder[i].author;
-
-    // 创建图片标签元素
-    const imgLabelElement = document.createElement("div");
-    imgLabelElement.id = "label";
-    imgLabelElement.style.fontSize = "90%";
-    pictureFolder[i].label.forEach(label => {
-      const spanElement = document.createElement('span');
-      spanElement.textContent = "#" + label;
-      imgLabelElement.appendChild(spanElement);
-    });
-
-    // 将图片设置区域添加到信息展示区域的容器元素中
-    infoContainerElement.appendChild(imgsetting);
-    // 将图片名称元素添加到信息展示区域的容器元素中
-    infoContainerElement.appendChild(imgNameElement);
-    // 将图片作者元素添加到信息展示区域的容器元素中
-    infoContainerElement.appendChild(imgAuthorElement);
-    // 将链接元素元素添加到信息展示区域的容器元素中
-    infoContainerElement.appendChild(imgLabelElement);
-
-    // 将图片展示区域添加到容器元素中
-    containerElement.appendChild(imageContainerElement);
-    // 将信息展示区域添加到容器元素中
-    containerElement.appendChild(infoContainerElement);
-
+    // 初始化加载
+    const containerElement = loading(pictureFolder[i]);
     // 将容器元素添加到图片展示区域中
     document.getElementById("imageInfo").appendChild(containerElement);
-
   })
   .catch(error => {
     console.error("Error fetching JSON:", error);
@@ -158,6 +63,107 @@ fetch(filePath)
       </div>
     </div>
 */
+
+// 创建图片元素
+function loading(picture) {
+  // 创建图片信息展示区域的容器元素
+  const containerElement = document.createElement("div");
+
+  // 创建图片展示区域的容器元素
+  const imageContainerElement = document.createElement("div");
+  imageContainerElement.id = "image";
+
+  // 创建图片元素
+  const imgElement = document.createElement("img");
+  imgElement.src = picture.href;
+  imgElement.alt = picture.name;
+
+  // 将图片元素添加到链接元素中
+  imageContainerElement.appendChild(imgElement);
+
+  // 创建信息展示区域的容器元素
+  const infoContainerElement = document.createElement("div");
+  infoContainerElement.id = "info";
+
+  // 创建图片设置区域
+  const imgsetting = document.createElement("div");
+  imgsetting.id = "setting";
+
+  // 创建爱心按钮元素
+  const loveButton = document.createElement("div");
+  loveButton.classList.toggle("love");
+  loveButton.addEventListener("click", () => {
+    // 切换爱心按钮的样式
+    loveButton.classList.toggle("loved");
+  });
+
+  // 创建下载按钮元素
+  const downloadButton = document.createElement("div");
+  downloadButton.id = "download";
+  downloadButton.addEventListener("click", () => {
+    // 弹出密码输入框
+    const password = prompt("请输入下载密码:");
+
+    // 正确密码
+    const correctPassword = "616";
+    // 检查密码是否正确
+    if (password === correctPassword) {
+      // 密码正确，执行下载操作
+      const a = document.createElement("a");
+      a.href = picture.href;
+      a.download = picture.name;
+      a.click();
+    } else {
+      // 密码错误，显示提示信息
+      alert("密码错误，无法下载。");
+    }
+  });
+
+  // 将爱心按钮边框元素添加到图片设置区域中
+  imgsetting.appendChild(loveButton);
+  // 将下载按钮元素添加到图片设置区域中
+  imgsetting.appendChild(downloadButton);
+
+  // 创建图片名称元素
+  const imgNameElement = document.createElement("div");
+  imgNameElement.id = "name";
+  imgNameElement.style.fontSize = "120%";
+  imgNameElement.style.fontWeight = "bold";
+  imgNameElement.textContent = picture.name;
+
+  // 创建图片作者元素
+  const imgAuthorElement = document.createElement("div");
+  imgAuthorElement.id = "author";
+  imgAuthorElement.style.fontWeight = "bold";
+  imgAuthorElement.textContent = picture.author;
+
+  // 创建图片标签元素
+  const imgLabelElement = document.createElement("div");
+  imgLabelElement.id = "label";
+  imgLabelElement.style.fontSize = "90%";
+  picture.label.forEach(label => {
+    const spanElement = document.createElement('span');
+    spanElement.textContent = "#" + label;
+    imgLabelElement.appendChild(spanElement);
+  });
+
+  // 将图片设置区域添加到信息展示区域的容器元素中
+  infoContainerElement.appendChild(imgsetting);
+  // 将图片名称元素添加到信息展示区域的容器元素中
+  infoContainerElement.appendChild(imgNameElement);
+  // 将图片作者元素添加到信息展示区域的容器元素中
+  infoContainerElement.appendChild(imgAuthorElement);
+  // 将链接元素元素添加到信息展示区域的容器元素中
+  infoContainerElement.appendChild(imgLabelElement);
+
+  // 将图片展示区域添加到容器元素中
+  containerElement.appendChild(imageContainerElement);
+  // 将信息展示区域添加到容器元素中
+  containerElement.appendChild(infoContainerElement);
+
+  // 返回包含图片信息的容器元素
+  return containerElement;
+}
 
 // 读取键盘
 document.addEventListener('keydown', (event) => {

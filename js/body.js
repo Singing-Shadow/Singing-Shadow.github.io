@@ -15,7 +15,7 @@ document.getElementById("nav").innerHTML = `
                 <li> <a href="https://www.pixiv.net">pixiv</a> </li>
                 <li> <a href="">教程</a> </li>
                 <li> <a href="">插画列表</a> </li>
-                <li> <a href="https://www.pixiv.net/users/25782197">MiyU专栏</a> </li>
+                <li> <a href="MiyU.html">MiyU专栏</a> </li>
                 <li> <a href="">其它</a> </li>
             </ul>
         </li>

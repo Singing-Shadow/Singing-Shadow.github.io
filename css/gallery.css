@@ -1,9 +1,19 @@
 /* 画廊 */
 #gallery {
-    /* 图片容器列数 */
-    column-count: 4;
-    /* 图片容器列间距 */
-    column-gap: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+}
+
+/* 图片信息容器 */
+.imageInfo-container {
+    width: 23%;
+    margin: 0 1%;
 }
 
 /* 图片容器 */
@@ -43,7 +53,7 @@
     right: 3%;
 
     /* 图片容器 */
-    width: 12%; 
+    width: 12%;
     height: auto;
 
     /* 为了兼容 */
@@ -63,7 +73,7 @@
     width: 100%;
     /* 限定容器宽高比为 1 / 1 */
     aspect-ratio: 1 / 1;
-    
+
     /* 为了兼容 */
     -webkit-mask: url('../picture/其它/love.svg') no-repeat center / contain;
     /* 图片蒙版 */
@@ -107,12 +117,10 @@
 /* 针对竖屏设备 */
 @media only screen and (orientation: portrait) {
 
-    /* 画廊 */
-    #gallery {
-        /* 图片容器列数 */
-        column-count: 2;
-        /* 图片容器列间距 */
-        column-gap: 2%;
+    /* 图片信息容器 */
+    .imageInfo-container {
+        width: 48%;
+        margin: 0 1%;
     }
 
     /* 图片信息 */
