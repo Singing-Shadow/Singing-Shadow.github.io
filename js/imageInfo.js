@@ -16,7 +16,7 @@ function getQueryParams() {
 
 // 定义 JSON 文件的相对路径
 const filePath = "../json/image.json";
-// 图片总数目
+// 存储图片数据
 var JSONFolder;
 
 // 使用 Fetch API 获取 JSON 文件
@@ -183,15 +183,15 @@ document.addEventListener('keydown', (event) => {
 function goToPreviousImage() {
   // 获取当前图片的索引
   let currentIndex = getCurrentIndex();
-  
+
   // 计算上一张图片的索引
   let previousIndex = currentIndex - 1;
-  
+
   // 如果是第一张图片，则循环到最后一张图片
   if (previousIndex < 0) {
     previousIndex = JSONFolder.length - 1;
   }
-  
+
   // 切换到上一张图片
   updateImage(previousIndex);
 }
@@ -200,15 +200,15 @@ function goToPreviousImage() {
 function goToNextImage() {
   // 获取当前图片的索引
   let currentIndex = getCurrentIndex();
-  
+
   // 计算下一张图片的索引
   let nextIndex = currentIndex + 1;
-  
+
   // 如果是最后一张图片，则循环到第一张图片
   if (nextIndex >= JSONFolder.length) {
     nextIndex = 0;
   }
-  
+
   // 切换到下一张图片
   updateImage(nextIndex);
 }
@@ -250,3 +250,61 @@ function updateImage(index) {
   // 更新当前图片的索引到 URL 中
   history.replaceState({}, '', `?id=${index + 1}`);
 }
+
+// 左右滑动切换图片
+document.addEventListener('DOMContentLoaded', (event) => {
+  // 初始化触摸事件相关变量
+  let startX;
+  let startY;
+  let endX;
+  let endY;
+
+  // 处理触摸开始事件
+  function handleTouchStart(evt) {
+    const firstTouch = evt.touches[0];
+    startX = firstTouch.clientX;
+    startY = firstTouch.clientY;
+  }
+
+  // 处理触摸移动事件
+  function handleTouchMove(evt) {
+    if (!startX || !startY) {
+      return;
+    }
+
+    endX = evt.touches[0].clientX;
+    endY = evt.touches[0].clientY;
+  }
+
+  // 处理触摸结束事件
+  function handleTouchEnd() {
+    if (!startX || !startY || !endX || !endY) {
+      return;
+    }
+
+    const diffX = endX - startX;
+    const diffY = endY - startY;
+
+    // 判断水平移动距离是否大于垂直移动距离
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX > 0) {
+        // 右滑动作
+        goToPreviousImage();
+      } else {
+        // 左滑动作
+        goToNextImage();
+      }
+    }
+
+    // 重置触摸事件相关变量
+    startX = null;
+    startY = null;
+    endX = null;
+    endY = null;
+  }
+
+  // 添加触摸事件监听器
+  document.addEventListener('touchstart', handleTouchStart, false);
+  document.addEventListener('touchmove', handleTouchMove, false);
+  document.addEventListener('touchend', handleTouchEnd, false);
+});
