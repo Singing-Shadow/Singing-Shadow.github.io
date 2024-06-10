@@ -297,8 +297,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
       const diffX = endX - startX;
       const diffY = endY - startY;
 
-      // 判断水平移动距离是否大于垂直移动距离
-      if (Math.abs(diffX) > Math.abs(diffY)) {
+      // 如果水平移动距离大于垂直移动距离的两倍，则判定为左右滑动
+      if (Math.abs(diffX) > Math.abs(diffY) * 2) {
         if (diffX > 0) {
           // 右滑动作
           goToPreviousImage();
