@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Tempest",
         "href": "../picture/1.jpg",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "Arcaea",
@@ -15,7 +15,7 @@
         "id": 2,
         "name": "Aixum 対立",
         "href": "../picture/2.jpg",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "Arcaea",
@@ -27,7 +27,7 @@
         "id": 3,
         "name": "或る神話の消えた日",
         "href": "../picture/3.jpg",
-        "class": "Pokemon",
+        "category": "Pokemon",
         "author": "かんな",
         "label": [
             "精灵宝可梦",
@@ -45,7 +45,7 @@
         "id": 4,
         "name": "rkgk",
         "href": "../picture/4.jpg",
-        "class": "Pokemon",
+        "category": "Pokemon",
         "author": "MiyU",
         "label": [
             "涂鸦",
@@ -56,7 +56,7 @@
         "id": 5,
         "name": "ポケモン 無題",
         "href": "../picture/5.jpg",
-        "class": "Pokemon",
+        "category": "Pokemon",
         "author": "雪降つゆ",
         "label": [
             "精灵宝可梦",
@@ -70,7 +70,7 @@
         "id": 6,
         "name": "光",
         "href": "../picture/6.jpg",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "SD",
@@ -81,7 +81,7 @@
         "id": 7,
         "name": "Arcaea",
         "href": "../picture/7.jpg",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "女孩子",
@@ -94,7 +94,7 @@
         "id": 8,
         "name": "Arcaea",
         "href": "../picture/8.jpg",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "女孩子",
@@ -107,7 +107,7 @@
         "id": 9,
         "name": "JK 光＆対立",
         "href": "../picture/9.jpg",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "JK",
@@ -118,7 +118,7 @@
         "id": 10,
         "name": "紅",
         "href": "../picture/10.jpg",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "女孩子",
@@ -134,7 +134,7 @@
         "id": 11,
         "name": "Kou",
         "href": "../picture/11.jpg",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "Arcaea",
@@ -147,7 +147,7 @@
         "id": 12,
         "name": "紅",
         "href": "../picture/12.png",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "女孩子",
@@ -160,7 +160,7 @@
         "id": 13,
         "name": "VISIONS",
         "href": "../picture/13.png",
-        "class": "原创",
+        "category": "原创",
         "author": "Mika Pikazo",
         "label": [
             "原创",
@@ -178,7 +178,7 @@
         "id": 14,
         "name": "Pokémon盖欧卡",
         "href": "../picture/14.jpg",
-        "class": "Pokemon",
+        "category": "Pokemon",
         "author": "shank",
         "label": [
             "原创",
@@ -196,7 +196,7 @@
         "id": 15,
         "name": "rkgk",
         "href": "../picture/15.png",
-        "class": "原创",
+        "category": "原创",
         "author": "MiyU",
         "label": [
             "女孩子",
@@ -207,7 +207,7 @@
         "id": 16,
         "name": "SHE - BLACK RAT",
         "href": "../picture/16.jpg",
-        "class": "原创",
+        "category": "原创",
         "author": "米山舞",
         "label": [
             "原创",
@@ -222,7 +222,7 @@
         "id": 17,
         "name": "カノンとラティアス",
         "href": "../picture/17.png",
-        "class": "Pokemon",
+        "category": "Pokemon",
         "author": "電竜ライ",
         "label": [
             "精灵宝可梦",
@@ -238,7 +238,7 @@
         "id": 18,
         "name": "バニー紅ちゃん",
         "href": "../picture/18.jpg",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "兔女郎",
@@ -251,7 +251,7 @@
         "id": 19,
         "name": "ポケモン25周年",
         "href": "../picture/19.jpg",
-        "class": "Pokemon",
+        "category": "Pokemon",
         "author": "TM",
         "label": [
             "精灵宝可梦",
@@ -269,7 +269,7 @@
         "id": 20,
         "name": "兄妹",
         "href": "../picture/20.png",
-        "class": "Pokemon",
+        "category": "Pokemon",
         "author": "orz",
         "label": [
             "精灵宝可梦",
@@ -282,7 +282,7 @@
         "id": 21,
         "name": "「愛してる」",
         "href": "../picture/21.png",
-        "class": "原创",
+        "category": "原创",
         "author": "そんぶん",
         "label": [
             "星野アイ",
@@ -300,7 +300,7 @@
         "id": 22,
         "name": "紅ちゃん",
         "href": "../picture/22.png",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "Arcaea",
@@ -313,7 +313,7 @@
         "id": 23,
         "name": "友利奈緒 重置版",
         "href": "../picture/23.jpg",
-        "class": "原创",
+        "category": "原创",
         "author": "友利厨",
         "label": [
             "Charlotte(アニメ)",
@@ -325,7 +325,7 @@
         "id": 24,
         "name": "祈祷",
         "href": "../picture/24.png",
-        "class": "原创",
+        "category": "原创",
         "author": "Uroam",
         "label": [
             "原创",
@@ -342,7 +342,7 @@
         "id": 25,
         "name": "楽園の素敵な巫女",
         "href": "../picture/25.jpg",
-        "class": "原创",
+        "category": "原创",
         "author": "ききのき",
         "label": [
             "博丽灵梦",
@@ -359,7 +359,7 @@
         "id": 26,
         "name": "水霊夢",
         "href": "../picture/26.png",
-        "class": "原创",
+        "category": "原创",
         "author": "羽々斬",
         "label": [
             "东方Project",
@@ -378,7 +378,7 @@
         "id": 27,
         "name": "かがみんつめあわせ",
         "href": "../picture/27.png",
-        "class": "原创",
+        "category": "原创",
         "author": "杏飴",
         "label": [
             "幸运星",
@@ -394,7 +394,7 @@
         "id": 28,
         "name": "つかさつめあわせ",
         "href": "../picture/28.png",
-        "class": "原创",
+        "category": "原创",
         "author": "杏飴",
         "label": [
             "幸运星",
@@ -410,7 +410,7 @@
         "id": 29,
         "name": "ヴァイオリンの日✨",
         "href": "../picture/29.png",
-        "class": "原创",
+        "category": "原创",
         "author": "カカポ",
         "label": [
             "四月は君の嘘",
@@ -422,7 +422,7 @@
         "id": 30,
         "name": "YELLOW FRILL",
         "href": "../picture/30.png",
-        "class": "原创",
+        "category": "原创",
         "author": "Mika Pikazo",
         "label": [
             "原创",
@@ -437,7 +437,7 @@
         "id": 31,
         "name": "ラグランジュ",
         "href": "../picture/31.png",
-        "class": "Arcaea",
+        "category": "Arcaea",
         "author": "MiyU",
         "label": [
             "Arcaea",
@@ -448,7 +448,7 @@
         "id": 32,
         "name": "GB_TOP",
         "href": "../picture/32.png",
-        "class": "原创",
+        "category": "原创",
         "author": "so品",
         "label": [
             "原创",

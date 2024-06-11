@@ -117,19 +117,6 @@ function loadMoreImages() {
   }
 }
 
-// 处理滚动事件
-function handleScroll() {
-  const footer = document.getElementById("footer");
-  const rect = footer.getBoundingClientRect();
-  // 检查页脚是否可见
-  const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
-
-  // 如果页脚可见，则加载更多图片
-  if (isVisible) {
-    loadMoreImages();
-  }
-}
-
 // 懒加载：添加滚动事件监听器，当页面滚动时调用 handleScroll 函数
 document.addEventListener('scroll', () => {
   const footer = document.getElementById("footer");

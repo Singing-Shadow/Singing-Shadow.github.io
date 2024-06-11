@@ -40,14 +40,14 @@
 /* 标题字体 */
 .title {
     /* 字体大小 */
-    font-size: 180%;
+    font-size: 1.8rem;
 }
 
 /* 背景 */
 body {
     /* 背景色 */
     background-color: #FFC7C7;
-    font-size: 100%;
+    font-size: 1rem;
 
     /* 隐藏滚动条 */
     /* Firefox */

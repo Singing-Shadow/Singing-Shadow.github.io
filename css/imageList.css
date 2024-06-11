@@ -1,0 +1,137 @@
+/* 画廊 */
+#imageList-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+/* 设置、列表区域 */
+#imageList-container>* {
+    width: 100%;
+
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FF9999;
+}
+
+/* 设置栏 */
+#setting {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0 0 1% 0;
+    padding: 1% 0;
+}
+
+/* 设置栏所有后代元素 */
+#setting * {
+    /* 背景色透明 */
+    background-color: #00000000;
+}
+
+/* 设置栏所有子元素 */
+#setting>* {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 20%;
+
+    /* 背景色透明 */
+    background-color: #00000000;
+}
+
+/* 设置栏所有孙子元素 */
+#setting>*>* {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 1%;
+
+    opacity: 0.4;
+    font-size: 0.8rem;
+}
+
+/* 设置栏所有孙子元素 - 鼠标悬停 */
+#setting>*>*:hover {
+    opacity: 0.9;
+}
+
+#button {
+    /* 为了兼容 */
+    -webkit-mask: url('../picture/其它/search.svg') no-repeat center / contain;
+    /* 图片蒙版 */
+    mask: url('../picture/其它/search.svg') no-repeat center / contain;
+    background-color: #000000;
+}
+
+/* 图片信息列表所有后代元素 */
+#imageList * {
+    font-size: 0.9rem;
+}
+
+/* ? */
+#item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+}
+
+/* 列表条目所有子元素 */
+#item>* {
+    box-sizing: border-box;
+    width: 16.6%;
+    padding: 0.2% 1%;
+
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+/* 列表条目 */
+.item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+
+    opacity: 0.7;
+}
+
+/* 列表条目 - 鼠标悬停 */
+.item:hover {
+    opacity: 1.0;
+}
+
+/* 列表条目所有子元素 */
+.item>* {
+    box-sizing: border-box;
+    width: 16.6%;
+    padding: 0.2% 1%;
+
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* 针对竖屏设备 */
+/* @media only screen and (orientation: portrait) {
+
+    #item>* {
+        width: 18%;
+    }
+
+    .item>* {
+        width: 18%;
+    }
+} */
