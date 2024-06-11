@@ -43,11 +43,11 @@ fetch(filePath)
 function createImageElement(picture) {
   // 创建图片信息展示区域的容器元素
   const containerElement = document.createElement("div");
-  containerElement.className = "imageInfo-container";
+  containerElement.classList.toggle("imageInfo-container");
 
   // 创建图片展示区域的容器元素
   const imageContainerElement = document.createElement("div");
-  imageContainerElement.className = "image-container";
+  imageContainerElement.classList.toggle("image-container");
 
   // 创建图片元素
   const imgElement = document.createElement("img");

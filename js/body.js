@@ -11,18 +11,18 @@ document.getElementById("nav").innerHTML = `
         <li class="number">
             分类
             <ul class="menu">
-                <li> <a href="gallery.html">我的图廊</a> </li>
+                <li> <a href="gallery.html">总画廊</a> </li>
                 <li> <a href="https://www.pixiv.net">pixiv</a> </li>
-                <li> <a href="">教程</a> </li>
-                <li> <a href="">插画列表</a> </li>
                 <li> <a href="MiyU.html">MiyU专栏</a> </li>
+                <li> <a href="imageList.html">插画列表</a> </li>
+                <li> <a href="">教程</a> </li>
                 <li> <a href="">其它</a> </li>
             </ul>
         </li>
         <li class="number">
             我的
             <ul class="menu">
-                <li> <a href="https://dylanyu233.rbind.io/">友情链接1</a> </li>
+                <li> <a href="https://dylanyu233.rbind.io">友情链接1</a> </li>
                 <li> <a href="https://github.com/MrRightXingYue">友情链接2</a> </li>
                 <li> <a href="home.html">我的</a> </li>
             </ul>

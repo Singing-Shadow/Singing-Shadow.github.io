@@ -16,6 +16,7 @@ fetch(filePath)
   .then(pictureFolder => {
     // 获取相应的图片信息
     JSONFolder = pictureFolder;
+
     // 初始化加载一些图片
     loadMoreImages();
   })
@@ -25,25 +26,31 @@ fetch(filePath)
 
 // 创建图片展示区域
 /*
-<div>
-<div>
-<img src="" alt="">
-</div>
-<p style="bold">
-textContent
-</p>
-</div>
+  <div>
+    <div id="setting">
+      <form>
+        <input id="" type="text" placeholder="MiyU">
+        <input id="" type="submit" value="搜索">
+        </form>
+    </div>
+    <p style="bold">
+      textContent
+    </p>
+    <p>
+      textContent
+    </p>
+  </div>
 */
 
 // 创建图片元素
 function createImageElement(picture) {
   // 创建图片信息展示区域的容器元素
   const containerElement = document.createElement("div");
-  containerElement.className = "imageInfo-container";
+  containerElement.classList.toggle("imageInfo-container");
 
   // 创建图片展示区域的容器元素
   const imageContainerElement = document.createElement("div");
-  imageContainerElement.className = "image-container";
+  imageContainerElement.classList.toggle("image-container");
 
   // 创建图片元素
   const imgElement = document.createElement("img");
@@ -82,10 +89,16 @@ function createImageElement(picture) {
   // 字体粗细
   imgNameElement.style.fontWeight = "bold";
 
+  // 创建图片作者元素
+  const imgAuthorElement = document.createElement("p");
+  imgAuthorElement.textContent = picture.author;
+
   // 将图片展示区域的容器元素添加到图片信息展示区域的容器元素中
   containerElement.appendChild(imageContainerElement);
   // 将图片名称元素添加到图片信息展示区域的容器元素中
   containerElement.appendChild(imgNameElement);
+  // 将图片作者元素添加到图片信息展示区域的容器元素中
+  containerElement.appendChild(imgAuthorElement);
 
   // 返回包含图片信息的容器元素
   return containerElement;
@@ -95,13 +108,8 @@ function createImageElement(picture) {
 function loadMoreImages() {
   const gallery = document.getElementById("gallery");
 
-  // 加载接下来的 8 张图片
-  for (let i = 0; i < 8 && currentIndex < JSONFolder.length; currentIndex++) {
-    // 跳过 pictureFolder 数组中作者不是 "MiyU" 的元素
-    if (JSONFolder[currentIndex].author !== "MiyU") {
-      currentIndex++;
-      continue;
-    }
+  // 加载接下来的 12 张图片
+  for (let i = 0; i < 12 && currentIndex < JSONFolder.length; currentIndex++) {
     console.log("loading");
     const picture = JSONFolder[currentIndex];
     // 创建图片元素并添加到画廊中
