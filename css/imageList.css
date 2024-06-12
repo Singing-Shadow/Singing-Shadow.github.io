@@ -125,13 +125,18 @@
 
 
 /* 针对竖屏设备 */
-/* @media only screen and (orientation: portrait) {
-
-    #item>* {
-        width: 18%;
-    }
+@media only screen and (orientation: portrait) {
 
     .item>* {
-        width: 18%;
+        width: 33.3%;
     }
-} */
+
+    #item>* {
+        width: 33.3%;
+    }
+
+    .label, #item>.label {
+        width: 0%;
+        padding: 0%;
+    }
+}
