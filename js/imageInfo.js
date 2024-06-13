@@ -1,19 +1,3 @@
-// 定义一个函数，用于解析URL中的查询参数
-function getQueryParams() {
-  // 获取URL中的查询字符串，并去掉开头的 ? 字符
-  const queryString = window.location.search.substring(1);
-  // 存储解析出来的查询参数
-  const params = {};
-  // 获取查询参数的键值对
-  // 将 id 转换为整数
-  // 得到最终值
-  if (queryString) {
-    params.id = parseInt(decodeURIComponent(queryString.split('=')[1]), 10);
-  }
-  // 返回 params 对象
-  return params;
-}
-
 // 定义 JSON 文件的相对路径
 const filePath = "../json/image.json";
 // 存储图片数据
@@ -43,6 +27,22 @@ fetch(filePath)
   .catch(error => {
     console.error("Error fetching JSON:", error);
   });
+
+// 定义一个函数，用于解析URL中的查询参数
+function getQueryParams() {
+  // 获取URL中的查询字符串，并去掉开头的 ? 字符
+  const queryString = window.location.search.substring(1);
+  // 存储解析出来的查询参数
+  const params = {};
+  // 获取查询参数的键值对
+  // 将 id 转换为整数
+  // 得到最终值
+  if (queryString) {
+    params.id = parseInt(decodeURIComponent(queryString.split('=')[1]), 10);
+  }
+  // 返回 params 对象
+  return params;
+}
 
 // 创建区域
 /*

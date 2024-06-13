@@ -1,16 +1,12 @@
 /* 图片信息 */
 #imageInfo {
-    /* 容器圆角 */
     border-radius: 1%;
-    /* 隐藏溢出部分 */
     overflow: hidden;
-
     background-color: #ffffff;
 }
 
 /* 图片 */
 #image {
-    /* 留白 */
     padding: 0 10%;
     background-color: #fafafa;
 }
@@ -23,11 +19,8 @@
 
 /* 信息 */
 #info {
-    /* 弹性布局 */
     display: flex;
-    /* 主轴垂直向下 */
     flex-direction: column;
-    /* 水平居左 */
     align-items: flex-start;
 
     padding: 2% 10%;
@@ -41,11 +34,8 @@
 
 /* 设置栏 */
 #setting {
-    /* 弹性布局 */
     display: flex;
-    /* 水平居右 */
     justify-content: flex-end;
-    /* 换行 */
     flex-wrap: wrap;
 
     width: 100%;
@@ -54,11 +44,10 @@
 
 /* 设置栏选项 */
 #setting * {
-    margin: 0 1%;
-    /* 图片容器 */
     height: 100%; 
     /* 限定容器宽高比为 1 / 1 */
     aspect-ratio: 1 / 1;
+    margin: 0 1%;
 }
 
 /* 点赞按钮 */
@@ -90,11 +79,8 @@
 
 /* 标签组 */
 #label {
-    /* 弹性布局 */
     display: flex;
-    /* 水平居左 */
     justify-content: flex-start;
-    /* 换行 */
     flex-wrap: wrap;
 
     width: 100%;

@@ -4,6 +4,11 @@ const filePath = "../json/image.json";
 var JSONFolder;
 // 当前加载到的图片索引
 let currentIndex = 0;
+// 图片展示区域
+const Path = "gallery";
+// 每页加载的图片数量
+const N = 8;
+
 
 // 使用 Fetch API 获取 JSON 文件
 fetch(filePath)
@@ -18,7 +23,7 @@ fetch(filePath)
     JSONFolder = pictureFolder;
 
     // 初始化加载一些图片
-    loadMoreImages();
+    loadMoreStuff("gallery", 8);
   })
   .catch(error => {
     console.error("Error fetching JSON:", error);
@@ -40,7 +45,7 @@ fetch(filePath)
 */
 
 // 创建图片元素
-function createImageElement(picture) {
+function createPathElement(picture) {
   // 创建图片信息展示区域的容器元素
   const containerElement = document.createElement("div");
   containerElement.classList.toggle("imageInfo-container");
@@ -101,31 +106,7 @@ function createImageElement(picture) {
   return containerElement;
 }
 
-// 加载更多图片
-function loadMoreImages() {
-  const gallery = document.getElementById("gallery");
-
-  // 加载接下来的 8 张图片
-  for (let i = 0; i < 8 && currentIndex < JSONFolder.length; currentIndex++) {
-    console.log("loading");
-    const picture = JSONFolder[currentIndex];
-    // 创建图片元素并添加到画廊中
-    const imgElement = createImageElement(picture);
-    gallery.appendChild(imgElement);
-    // 更新当前索引
-    i++;
-  }
+// 判断图片是否符合条件
+function judgePicture(picture) {
+  return false;
 }
-
-// 懒加载：添加滚动事件监听器，当页面滚动时调用 handleScroll 函数
-document.addEventListener('scroll', () => {
-  const footer = document.getElementById("footer");
-  const rect = footer.getBoundingClientRect();
-  // 检查页脚是否可见
-  const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
-
-  // 如果页脚可见，则加载更多图片
-  if (isVisible) {
-    loadMoreImages();
-  }
-});

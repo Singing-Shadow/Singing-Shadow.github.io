@@ -11,7 +11,6 @@
 /* 设置、列表区域 */
 #imageList-container>* {
     width: 100%;
-
     border-radius: 10px;
     overflow: hidden;
     background-color: #FF9999;
@@ -29,7 +28,6 @@
 
 /* 设置栏所有后代元素 */
 #setting * {
-    /* 背景色透明 */
     background-color: #00000000;
 }
 
@@ -40,16 +38,14 @@
     align-items: center;
 
     width: 20%;
-
-    /* 背景色透明 */
     background-color: #00000000;
 }
 
 /* 设置栏所有孙子元素 */
 #setting>*>* {
+    padding: 1%;
     border: 1px solid #000000;
     border-radius: 10px;
-    padding: 1%;
 
     opacity: 0.4;
     font-size: 0.8rem;
@@ -60,6 +56,7 @@
     opacity: 0.9;
 }
 
+/* 设置栏搜索按钮 */
 #button {
     /* 为了兼容 */
     -webkit-mask: url('../picture/其它/search.svg') no-repeat center / contain;
@@ -73,7 +70,7 @@
     font-size: 0.9rem;
 }
 
-/* ? */
+/* 列表条目() */
 #item {
     display: flex;
     justify-content: flex-start;
@@ -82,17 +79,18 @@
     width: 100%;
 }
 
-/* 列表条目所有子元素 */
+/* 列表条目()所有子元素 */
 #item>* {
+    flex-grow: 1;
     box-sizing: border-box;
     width: 16.6%;
     padding: 0.2% 1%;
 
+    font-size: 1rem;
     text-align: left;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 1rem;
 }
 
 /* 列表条目 */
@@ -102,7 +100,6 @@
     align-items: center;
 
     width: 100%;
-
     opacity: 0.7;
 }
 
@@ -118,6 +115,7 @@
     padding: 0.2% 1%;
 
     text-align: left;
+    /* 文本溢出省略为省略号 */
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -127,15 +125,21 @@
 /* 针对竖屏设备 */
 @media only screen and (orientation: portrait) {
 
+    /* 列表条目所有子元素 */
     .item>* {
+        flex-grow: 1;
         width: 33.3%;
     }
 
+    /* 列表条目()所有子元素 */
     #item>* {
+        flex-grow: 1;
         width: 33.3%;
     }
 
-    .label, #item>.label {
+    /* 所有标签 */
+    .label,
+    #item>.label {
         width: 0%;
         padding: 0%;
     }

@@ -2,16 +2,19 @@
 @font-face {
     font-family: "微软雅黑";
     src: url("../font/微软雅黑.ttc")format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: "微软雅黑 粗体";
     src: url("../font/微软雅黑\ 粗体.ttc")format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: "微软雅黑 Light";
     src: url("../font/微软雅黑\ Light.ttc")format('truetype');
+    font-display: swap;
 }
 
 /* 全局设定 */
@@ -33,21 +36,19 @@
     font-family: "微软雅黑", "Microsoft YaHei", "微软雅黑 Light", "Microsoft YaHei Light";
     /* 字符间距 */
     letter-spacing: 0.2vw;
-    /* 默认字体黑色 */
+    /* 默认字体棕色 */
     color: #A63232;
 }
 
 /* 标题字体 */
 .title {
-    /* 字体大小 */
     font-size: 1.8rem;
 }
 
 /* 背景 */
 body {
-    /* 背景色 */
-    background-color: #FFC7C7;
     font-size: 1rem;
+    background-color: #FFC7C7;
 
     /* 隐藏滚动条 */
     /* Firefox */
@@ -81,7 +82,6 @@ main {
 
     /* 全局设定 */
     * {
-        /* 字体系列 */
         font-family: "微软雅黑 Light", "Microsoft YaHei Light", "微软雅黑", "Microsoft YaHei";
     }
 }

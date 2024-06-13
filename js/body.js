@@ -43,3 +43,8 @@ document.addEventListener('dragstart', function (event) {
 document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
 });
+
+// 禁止选中文字 - 有点狠了[笑哭]
+// document.addEventListener('selectstart', function (event) {
+//     event.preventDefault();
+// })

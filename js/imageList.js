@@ -4,6 +4,10 @@ const filePath = "../json/image.json";
 var JSONFolder;
 // 当前加载到的图片索引
 let currentIndex = 0;
+// 图片列表展示区域
+const Path = "imageList";
+// 每页加载的条目数量
+const N = 24;
 
 // 使用 Fetch API 获取 JSON 文件
 fetch(filePath)
@@ -19,7 +23,7 @@ fetch(filePath)
 
     // 初始化加载列表
     createElement();
-    loadMoreLists();
+    loadMoreStuff(Path, N);
   })
   .catch(error => {
     console.error("Error fetching JSON:", error);
@@ -81,6 +85,8 @@ function createElement() {
   const searchButton = document.createElement("input");
   searchButton.id = "button";
   searchButton.type = "submit";
+  searchButton.value = "    ";
+  // 设置搜索按钮点击后的事件
   searchButton.onclick = function () {
     // 获取搜索框的值
     const searchText = document.getElementById("text").value;
@@ -187,9 +193,9 @@ function createElement() {
   document.getElementById("List").appendChild(containerElement);
 }
 
-// 创建列表元素
-function createItemElement(Item) {
-  // 创建列表元素
+// 创建条目元素
+function createPathElement(Item) {
+  // 创建条目元素
   const listElement = document.createElement("p");
   listElement.classList.toggle("item");
 
@@ -216,7 +222,7 @@ function createItemElement(Item) {
   categoryElement.textContent = Item.category;
   categoryElement.style.display = "inline-block";
 
-  // 将图片名称、图片作者、图片分类元素添加到列表元素中
+  // 将图片名称、图片作者、图片分类元素添加到条目元素中
   listElement.appendChild(nameElement);
   listElement.appendChild(authorElement);
   listElement.appendChild(categoryElement);
@@ -231,35 +237,11 @@ function createItemElement(Item) {
     listElement.appendChild(labelElement);
   }
 
-  // 返回列表元素
+  // 返回条目元素
   return listElement;
 }
 
-// 加载更多图片
-function loadMoreLists() {
-  const List = document.getElementById("imageList");
-
-  // 加载接下来的 24 项条目
-  for (let i = 0; i < 24 && currentIndex < JSONFolder.length; currentIndex++) {
-    console.log("loading");
-    const list = JSONFolder[currentIndex];
-    // 创建列表元素并添加到图片列表展示区域中
-    const listElement = createItemElement(list);
-    List.appendChild(listElement);
-    // 更新当前索引
-    i++;
-  }
+// 判断条目是否符合条件
+function judgePicture(picture) {
+  return false;
 }
-
-// 懒加载：添加滚动事件监听器，当页面滚动时调用 handleScroll 函数
-document.addEventListener('scroll', () => {
-  const footer = document.getElementById("footer");
-  const rect = footer.getBoundingClientRect();
-  // 检查页脚是否可见
-  const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
-
-  // 如果页脚可见，则加载更多图片
-  if (isVisible) {
-    loadMoreLists();
-  }
-});
