@@ -9,7 +9,6 @@ const Path = "gallery";
 // 每页加载的图片数量
 const N = 8;
 
-
 // 使用 Fetch API 获取 JSON 文件
 fetch(filePath)
   .then(response => {
@@ -21,9 +20,7 @@ fetch(filePath)
   .then(pictureFolder => {
     // 获取相应的图片信息
     JSONFolder = pictureFolder;
-
-    // 初始化加载一些图片
-    loadMoreStuff("gallery", 8);
+    loadMoreStuff(Path, N);
   })
   .catch(error => {
     console.error("Error fetching JSON:", error);

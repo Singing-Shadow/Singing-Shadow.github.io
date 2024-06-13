@@ -12,12 +12,12 @@ fetch(filePath)
     return response.json();
   })
   .then(pictureFolder => {
+    // 获取相应的图片信息
+    JSONFolder = pictureFolder;
     // 解析URL中的查询参数
     const params = getQueryParams();
     // 并从json文件中找到对应的图片序号
     let i = params.id - 1;
-    // 获取相应的图片信息
-    JSONFolder = pictureFolder;
 
     // 初始化加载
     const containerElement = loading(pictureFolder[i]);
@@ -165,58 +165,23 @@ function loading(picture) {
   return containerElement;
 }
 
-// 读取键盘
-document.addEventListener('keydown', (event) => {
-  // 获取按下的键码
-  const key = event.key;
-
-  // 如果按下的是左箭头键
-  if (key === 'ArrowLeft') {
-    // 切换到上一张图片
-    goToPreviousImage();
-    console.log("left");
-  }
-
-  // 如果按下的是右箭头键
-  if (key === 'ArrowRight') {
-    // 切换到下一张图片
-    goToNextImage();
-    console.log("right");
-  }
-});
-
-// 切换到上一张图片
-function goToPreviousImage() {
+// 切换到新一张图片
+function goToNewImage(i) {
   // 获取当前图片的索引
   let currentIndex = getCurrentIndex();
+  // 计算新一张图片的索引
+  let newIndex = currentIndex + i;
 
-  // 计算上一张图片的索引
-  let previousIndex = currentIndex - 1;
-
-  // 如果是第一张图片，则循环到最后一张图片
-  if (previousIndex < 0) {
-    previousIndex = JSONFolder.length - 1;
+  // 如果是第一张图片之前，则循环到最后一张图片
+  if (newIndex < 0) {
+    newIndex = JSONFolder.length - 1;
+  }
+  // 如果是最后一张图片之后，则循环到第一张图片
+  else if (newIndex >= JSONFolder.length) {
+    newIndex = 0;
   }
 
-  // 切换到上一张图片
-  updateImage(previousIndex);
-}
-
-// 切换到下一张图片
-function goToNextImage() {
-  // 获取当前图片的索引
-  let currentIndex = getCurrentIndex();
-
-  // 计算下一张图片的索引
-  let nextIndex = currentIndex + 1;
-
-  // 如果是最后一张图片，则循环到第一张图片
-  if (nextIndex >= JSONFolder.length) {
-    nextIndex = 0;
-  }
-
-  // 切换到下一张图片
-  updateImage(nextIndex);
+  updateImage(newIndex);
 }
 
 // 获取当前图片的索引
@@ -257,6 +222,23 @@ function updateImage(index) {
   history.replaceState({}, '', `?id=${index + 1}`);
 }
 
+// 读取键盘
+document.addEventListener('keydown', (event) => {
+  // 获取按下的键码
+  const key = event.key;
+
+  // 如果按下的是左箭头键
+  if (key === 'ArrowLeft') {
+    goToNewImage(-1);
+    console.log("left");
+  }
+  // 如果按下的是右箭头键
+  else if (key === 'ArrowRight') {
+    goToNewImage(1);
+    console.log("right");
+  }
+});
+
 // 左右滑动切换图片
 document.addEventListener('DOMContentLoaded', (event) => {
   // 初始化触摸事件相关变量
@@ -273,7 +255,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // 获取触摸开始时间
     startTime = new Date().getTime();
   }
-
   // 处理触摸移动事件
   function handleTouchMove(evt) {
     if (!startX || !startY) {
@@ -282,7 +263,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     endX = evt.touches[0].clientX;
     endY = evt.touches[0].clientY;
   }
-
   // 处理触摸结束事件
   function handleTouchEnd() {
     // 如果触摸开始和结束位置存在
@@ -297,20 +277,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // 如果触摸持续时间在1秒以内
     if (elapsedTime <= 1000) {
-
-
       // 计算触摸移动距离
       const diffX = endX - startX;
       const diffY = endY - startY;
 
-      // 如果水平移动距离大于垂直移动距离的两倍，则判定为左右滑动
-      if (Math.abs(diffX) > Math.abs(diffY) * 2) {
+      // 如果水平移动距离大于垂直移动距离的1.5倍，则判定为左右滑动
+      if (Math.abs(diffX) > Math.abs(diffY) * 1.5) {
         if (diffX > 0) {
           // 右滑动作
-          goToPreviousImage();
-        } else {
+          goToNewImage(-1);
+        }
+        else {
           // 左滑动作
-          goToNextImage();
+          goToNewImage(1);
         }
       }
     }
