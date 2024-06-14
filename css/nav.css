@@ -25,8 +25,6 @@ nav {
     width: 10%;
     /* 最小宽度 */
     min-width: 100px;
-    /* 字体大小 */
-    font-size: 100%;
     padding: 0.5% 0;
 }
 
@@ -75,7 +73,6 @@ nav {
     background-color: #FF9999;
 }
 
-
 /* 鼠标划过 - 菜单栏选项 */
 .menu li:hover>a {
     color: #ffffff;
@@ -90,6 +87,7 @@ nav a {
 
 /* 针对非PC设备 */
 @media only screen and (max-width: 768px) {
+
     /* 导航栏选项 */
     .number {
         padding: 1% 0;

@@ -1,13 +1,15 @@
 // 定义 JSON 文件的相对路径
 const filePath = "../json/image.json";
 // 存储图片数据
-var JSONFolder;
+let JSONFolder;
 // 当前加载到的图片索引
 let currentIndex = 0;
 // 图片列表展示区域
 const Path = "imageList";
 // 每页加载的条目数量
 const N = 24;
+// 搜索框输入值
+let searchContest = "";
 
 // 使用 Fetch API 获取 JSON 文件
 fetch(filePath)
@@ -89,12 +91,15 @@ function createElement() {
   // 设置搜索按钮点击后的事件
   searchButton.onclick = function () {
     // 获取搜索框的值
-    const searchText = document.getElementById("text").value;
-    // 进行搜索操作
-    // searchImage(searchText);
-    // 刷新图片信息列表区域
-    // refreshImageList();
-    console.log(searchText);
+    searchContest = document.getElementById("text").value.toLowerCase();
+    // 更新列表展示区域
+    currentIndex = 0;
+
+    // 清空列表展示区域
+    document.getElementById(Path).innerHTML = "";
+    // 加回列表展示区域表头
+    document.getElementById(Path).appendChild(createTableHeader());
+    loadMoreStuff(Path, N);
   }
 
   // 将搜索框和搜索按钮添加到搜索栏中
@@ -140,6 +145,20 @@ function createElement() {
   const imgList = document.createElement("div");
   imgList.id = "imageList";
 
+  // 将表头添加到图片信息列表区域中
+  imgList.appendChild(createTableHeader());
+
+  // 将列表设置区域添加到图片列表展示区域的容器元素中
+  containerElement.appendChild(imgsetting);
+  // 将图片信息列表区域添加到图片列表展示区域的容器元素中
+  containerElement.appendChild(imgList);
+
+  // 添加到画廊中
+  document.getElementById("List").appendChild(containerElement);  
+}
+
+// 创建列表展示区域表头
+function createTableHeader() {
   // 创建列表元素
   const listElement = document.createElement("p");
   listElement.id = "item";
@@ -181,16 +200,7 @@ function createElement() {
     listElement.appendChild(labelElement);
   }
 
-  // 将列表元素添加到图片信息列表区域中
-  imgList.appendChild(listElement);
-
-  // 将列表设置区域添加到图片列表展示区域的容器元素中
-  containerElement.appendChild(imgsetting);
-  // 将图片信息列表区域添加到图片列表展示区域的容器元素中
-  containerElement.appendChild(imgList);
-
-  // 添加到画廊中
-  document.getElementById("List").appendChild(containerElement);
+  return listElement;
 }
 
 // 创建条目元素
@@ -243,5 +253,28 @@ function createPathElement(Item) {
 
 // 判断条目是否符合条件
 function judgePicture(picture) {
-  return false;
+  let judgement = false;
+  if (searchContest === "") {
+    return true;
+  }
+  // 根据搜索条件过滤并遍历对象的特定属性：name、category、author、label
+  ['name', 'category', 'author', 'label'].forEach(key => {
+    // 获取当前属性的值
+    const value = picture[key];
+    // 如果属性值是数组，则进一步遍历数组
+    if (Array.isArray(value)) {
+      for (let i = 0; i < value.length; i++) {
+        let subValue = value[i];
+        if (subValue.toLowerCase().includes(searchContest)) {
+          judgement = true;
+          break;
+        }
+      }      
+    }
+    else if (value.toLowerCase().includes(searchContest)) {
+      judgement = true;
+    }
+    return;
+  });
+  return judgement;
 }

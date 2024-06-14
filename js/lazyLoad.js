@@ -5,9 +5,8 @@ function loadMoreStuff(Path, N) {
     // 加载接下来的 n 项内容
     for (let i = 0; i < N && currentIndex < JSONFolder.length; currentIndex++) {
         const path = JSONFolder[currentIndex];
-        // 跳过 pictureFolder 数组中作者不是 "MiyU" 的元素
-        if (judgePicture(path)) {
-            currentIndex++;
+        // 跳过 pictureFolder 数组中不合条件的元素
+        if (! judgePicture(path)) {
             continue;
         }
         console.log("loading");

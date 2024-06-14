@@ -105,5 +105,5 @@ function createPathElement(picture) {
 
 // 判断图片是否符合条件
 function judgePicture(picture) {
-  return false;
+  return true;
 }

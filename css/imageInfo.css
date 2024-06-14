@@ -39,12 +39,12 @@
     flex-wrap: wrap;
 
     width: 100%;
-    height: 4vh;
+    height: 1.5rem;
 }
 
 /* 设置栏选项 */
 #setting * {
-    height: 100%; 
+    height: 100%;
     /* 限定容器宽高比为 1 / 1 */
     aspect-ratio: 1 / 1;
     margin: 0 1%;
