@@ -82,14 +82,26 @@ function createElement() {
   searchText.id = "text";
   searchText.type = "text";
   searchText.placeholder = "MiyU";
+  // 设置输入框按键事件处理函数
+  searchText.addEventListener("keydown", function (event) {
+    // 检测是否按下了回车键（Enter键）
+    if (event.key === "Enter") {
+      // 阻止默认行为
+      event.preventDefault();
+      // 触发搜索按钮的点击事件处理函数
+      searchButton.onclick(event);
+    }
+  });
 
   // 创建搜索按钮
   const searchButton = document.createElement("input");
   searchButton.id = "button";
-  searchButton.type = "submit";
+  searchButton.type = "button";
   searchButton.value = "    ";
-  // 设置搜索按钮点击后的事件
-  searchButton.onclick = function () {
+  // 设置搜索按钮点击后的事件处理函数
+  searchButton.onclick = function (event) {
+    // 阻止表单的默认提交行为
+    event.preventDefault();
     // 获取搜索框的值
     searchContest = document.getElementById("text").value.toLowerCase();
     // 更新列表展示区域
