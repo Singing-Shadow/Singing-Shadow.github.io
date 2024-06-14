@@ -46,6 +46,7 @@ nav {
     left: 0;
 
     /* 与上级元素宽度相同 */
+    box-sizing: border-box;
     width: 100%;
     padding-bottom: 2%;
 
@@ -66,11 +67,15 @@ nav {
     /* 相对自身默认定位 */
     position: relative;
     padding: 3px 0;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 /* 鼠标划过 - 菜单栏选项 */
 .menu li:hover {
-    background-color: #FF9999;
+    background-color: #A63232;
 }
 
 /* 鼠标划过 - 菜单栏选项 */

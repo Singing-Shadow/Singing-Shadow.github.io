@@ -92,6 +92,7 @@ function loading(picture) {
   // 创建爱心按钮元素
   const loveButton = document.createElement("div");
   loveButton.classList.toggle("love");
+  loveButton.title = "喜欢";
   loveButton.addEventListener("click", () => {
     // 切换爱心按钮的样式
     loveButton.classList.toggle("loved");
@@ -100,6 +101,7 @@ function loading(picture) {
   // 创建下载按钮元素
   const downloadButton = document.createElement("div");
   downloadButton.id = "download";
+  downloadButton.title = "下载";
   downloadButton.addEventListener("click", () => {
     // 弹出密码输入框
     const password = prompt("请输入下载密码:");

@@ -22,8 +22,9 @@
     justify-content: space-around;
     align-items: center;
 
+    box-sizing: border-box;
     margin: 0 0 1% 0;
-    padding: 1% 0;
+    padding: 0.5rem 0;
 }
 
 /* 设置栏所有后代元素 */
@@ -37,13 +38,16 @@
     justify-content: space-around;
     align-items: center;
 
-    width: 18%;
+    height: 1.2rem;
+    margin: 0 1%;
     background-color: #00000000;
 }
 
 /* 设置栏所有孙子元素 */
 #setting>*>* {
+    box-sizing: border-box;
     padding: 1%;
+    margin: 0 0.5rem;
     border: 1px solid #000000;
     border-radius: 10px;
 
@@ -56,6 +60,10 @@
     opacity: 0.9;
 }
 
+#text {
+    width: 8rem;
+}
+
 /* 设置栏搜索按钮 */
 #button {
     /* 为了兼容 */
@@ -63,6 +71,7 @@
     /* 图片蒙版 */
     mask: url('../picture/其它/search.svg') no-repeat center / contain;
     background-color: #000000;
+    height: 1.5rem;
 }
 
 /* 图片信息列表所有后代元素 */
@@ -123,6 +132,17 @@
 
 /* 针对竖屏设备 */
 @media only screen and (orientation: portrait) {
+
+    /* 设置栏 */
+    #setting {
+        justify-content: flex-start;
+    }
+
+
+    /* 设置栏所有子元素 */
+    #setting>* {
+        margin: 0 3%;
+    }
 
     /* 列表条目所有子元素 */
     .item>* {

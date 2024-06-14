@@ -64,10 +64,12 @@ function createPathElement(picture) {
   // 创建爱心按钮背景元素
   const loveButtonbackground = document.createElement("div");
   loveButtonbackground.classList.add("love-button-background");
+  loveButtonbackground.title = "喜欢";
 
   // 创建爱心按钮元素
   const loveButton = document.createElement("div");
   loveButton.classList.add("love-button");
+  loveButton.title = "喜欢";
   loveButton.addEventListener("click", () => {
     // 切换爱心按钮的样式
     loveButton.classList.toggle("loved");
@@ -87,6 +89,11 @@ function createPathElement(picture) {
   imgNameElement.textContent = picture.name;
   // 字体粗细
   imgNameElement.style.fontWeight = "bold";
+  imgNameElement.addEventListener("click", () => {
+    const id = picture.id;
+    const url = `imageInfo.html?id=${encodeURIComponent(id)}`;
+    window.open(url, '_blank');
+  });
 
   // 创建图片作者元素
   const imgAuthorElement = document.createElement("p");

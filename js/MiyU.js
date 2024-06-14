@@ -85,6 +85,11 @@ function createPathElement(picture) {
   imgNameElement.textContent = picture.name;
   // 字体粗细
   imgNameElement.style.fontWeight = "bold";
+  imgNameElement.addEventListener("click", () => {
+    const id = picture.id;
+    const url = `imageInfo.html?id=${encodeURIComponent(id)}`;
+    window.open(url, '_blank');
+  });
 
   // 将图片展示区域的容器元素添加到图片信息展示区域的容器元素中
   containerElement.appendChild(imageContainerElement);

@@ -98,6 +98,7 @@ function createElement() {
   searchButton.id = "button";
   searchButton.type = "button";
   searchButton.value = "    ";
+  searchButton.title = "搜索";
   // 设置搜索按钮点击后的事件处理函数
   searchButton.onclick = function (event) {
     // 阻止表单的默认提交行为
