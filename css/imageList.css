@@ -19,10 +19,9 @@
 /* 设置栏 */
 #setting {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
-    box-sizing: border-box;
     margin: 0 0 1% 0;
     padding: 0.5rem 0;
 }
@@ -32,19 +31,18 @@
     background-color: #00000000;
 }
 
-/* 设置栏所有子元素 */
-#setting>* {
+/* 搜索栏 */
+#search {
     display: flex;
     justify-content: space-around;
     align-items: center;
 
     height: 1.2rem;
     margin: 0 1%;
-    background-color: #00000000;
 }
 
-/* 设置栏所有孙子元素 */
-#setting>*>* {
+/* 搜索栏所有子元素 */
+#search>* {
     box-sizing: border-box;
     padding: 1%;
     margin: 0 0.5rem;
@@ -79,7 +77,7 @@
     font-size: 0.9rem;
 }
 
-/* 列表条目() */
+/* 表头 */
 #item {
     display: flex;
     justify-content: flex-start;
@@ -88,11 +86,10 @@
     width: 100%;
 }
 
-/* 列表条目()所有子元素 */
+/* 表头所有子元素 */
 #item>* {
-    flex-grow: 1;
+    flex: 1;
     box-sizing: border-box;
-    width: 16.6%;
     padding: 0.2% 1%;
 
     font-size: 1rem;
@@ -119,8 +116,8 @@
 
 /* 列表条目所有子元素 */
 .item>* {
+    flex: 1;
     box-sizing: border-box;
-    width: 16.6%;
     padding: 0.2% 1%;
 
     text-align: left;
@@ -138,28 +135,15 @@
         justify-content: flex-start;
     }
 
-
     /* 设置栏所有子元素 */
     #setting>* {
         margin: 0 3%;
     }
 
-    /* 列表条目所有子元素 */
-    .item>* {
-        flex-grow: 1;
-        width: 33.3%;
-    }
-
-    /* 列表条目()所有子元素 */
-    #item>* {
-        flex-grow: 1;
-        width: 33.3%;
-    }
-
     /* 所有标签 */
     .label,
     #item>.label {
-        width: 0%;
+        flex: 0;
         padding: 0%;
     }
 }

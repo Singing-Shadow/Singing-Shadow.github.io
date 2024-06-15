@@ -119,40 +119,8 @@ function createElement() {
   searchInput.appendChild(searchText);
   searchInput.appendChild(searchButton);
 
-  // 创建排序设置区域
-  const sortSelectContainer = document.createElement("div");
-
-  // 创建排序下拉框
-  const sortSelect = document.createElement("select");
-  sortSelect.id = "sort";
-  sortSelect.name = "sort";
-
-  // 创建排序选项
-  const sortOption1 = document.createElement("option");
-  sortOption1.value = "0";
-  sortOption1.text = "默认排序";
-  const sortOption2 = document.createElement("option");
-  sortOption2.value = "1";
-  sortOption2.text = "按名称排序";
-  const sortOption3 = document.createElement("option");
-  sortOption3.value = "2";
-  sortOption3.text = "按作者排序";
-  const sortOption4 = document.createElement("option");
-  sortOption4.value = "3";
-  sortOption4.text = "按分类排序";
-
-  // 将排序选项添加到排序下拉框中
-  sortSelect.appendChild(sortOption1);
-  sortSelect.appendChild(sortOption2);
-  sortSelect.appendChild(sortOption3);
-  sortSelect.appendChild(sortOption4);
-
-  // 将排序下拉框添加到排序设置区域中
-  sortSelectContainer.appendChild(sortSelect);
-
-  // 将搜索栏和排序设置区域添加到列表设置区域中
+  // 将搜索栏添加到列表设置区域中
   imgsetting.appendChild(searchInput);
-  imgsetting.appendChild(sortSelectContainer);
 
   // 创建图片信息列表区域
   const imgList = document.createElement("div");
@@ -167,7 +135,7 @@ function createElement() {
   containerElement.appendChild(imgList);
 
   // 添加到画廊中
-  document.getElementById("List").appendChild(containerElement);  
+  document.getElementById("List").appendChild(containerElement);
 }
 
 // 创建列表展示区域表头
@@ -282,7 +250,7 @@ function judgePicture(picture) {
           judgement = true;
           break;
         }
-      }      
+      }
     }
     else if (value.toLowerCase().includes(searchContest)) {
       judgement = true;
