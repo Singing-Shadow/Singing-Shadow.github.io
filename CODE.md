@@ -131,7 +131,7 @@
 
   > - 'void'：无
 
-- 所在文件：imageInfo.js
+- 所在文件：switch.js
 
 ### getCurrentIndex()：
 
@@ -145,7 +145,7 @@
 
   > - 'params.id - 1'：数值，表示图片索引的增量
 
-- 所在文件：imageInfo.js
+- 所在文件：switch.js
 
 ### updateImage(index)：
 
@@ -159,7 +159,7 @@
 
   > - 'void'：无
 
-- 所在文件：imageInfo.js
+- 所在文件：switch.js
 
 ### createElement()：
 
@@ -192,40 +192,45 @@
 
 ## 监听器
 
-### document.addEventListener('DOMContentLoaded', (event) => { ... })：
+### document.addEventListener('DOMContentLoaded', () => { ... })：
 
 - 作用：加载页眉、导航栏和页尾。
+- 所在文件：body.js
+
+### window.addEventListener('scroll', () => { ... })：
+
+- 作用：控制置顶按钮变化。
 
 - 所在文件：body.js
 
-### document.addEventListener('dragstart', (event) => { ... })：
+### window.addEventListener('dragstart', (event) => { ... })：
 
 - 作用：阻止拖动事件。
 
 - 所在文件：body.js
 
-### document.addEventListener('contextmenu', (event) => { ... })：
+### window.addEventListener('contextmenu', (event) => { ... })：
 
 - 作用：阻止右键菜单事件。
 
 - 所在文件：body.js
 
-### document.addEventListener('selectstart', (event) => { ... })：
+### window.addEventListener('selectstart', (event) => { ... })：
 
 - 作用：阻止文本选择事件（被注释掉了）。
 - 所在文件：body.js
 
-### document.addEventListener('keydown', (event) => { ... })：
+### window.addEventListener('keydown', (event) => { ... })：
 
 - 作用：监听键盘事件，左右箭头键切换图片。
 
-- 所在文件：imageInfo.js
+- 所在文件：switch.js
 
-### document.addEventListener('DOMContentLoaded', (event) => { ... })：
+### window.addEventListener('DOMContentLoaded', () => { ... })：
 
-- 作用：监听键盘事件，左右箭头键切换图片。
+- 作用：监听键盘事件，左右滑动切换图片。
 
-- 所在文件：imageInfo.js
+- 所在文件：switch.js
 
 ### document.addEventListener('scroll', () => {...})：
 

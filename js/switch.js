@@ -55,8 +55,8 @@ function updateImage(index) {
   history.replaceState({}, '', `?id=${index + 1}`);
 }
 
-// 读取键盘
-document.addEventListener('keydown', (event) => {
+// 左右箭头键切换图片
+window.addEventListener('keydown', (event) => {
   // 获取按下的键码
   const key = event.key;
 
@@ -73,7 +73,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 // 左右滑动切换图片
-document.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
   // 初始化触摸事件相关变量
   let startX;
   let startY;

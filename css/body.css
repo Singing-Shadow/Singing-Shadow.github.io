@@ -77,6 +77,36 @@ main {
     min-height: 90vh;
 }
 
+/* 返回顶部按钮容器 */
+#up-to-top {
+    position: fixed;
+    right: 1%;
+    bottom: 5%;
+    width: 3rem;
+    z-index: 10;
+    background-color: #00000060;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+/* 返回顶部按钮 */
+#up-to-top-button {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* 为了兼容 */
+    -webkit-mask: url('../picture/其它/up-to-top.svg') no-repeat center / contain;
+    /* 图片蒙版 */
+    mask: url('../picture/其它/up-to-top.svg') no-repeat center / contain;
+    background-color: #FFC7C7;
+    cursor: pointer;
+}
+
+/* 禁用按钮 */
+#up-to-top-button:disabled {
+    cursor: default;
+}
+
 /* 针对非PC设备 */
 @media only screen and (max-width: 768px) {
 
