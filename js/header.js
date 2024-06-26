@@ -57,6 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // 遮罩层
   const overlay = document.createElement('div');
   overlay.classList.add("overlay");
+  overlay.onclick = () => {
+    overlay.classList.toggle("overlay-open");
+    navList.classList.toggle("nav-open");
+    document.body.classList.toggle('no-scroll');
+  };
   document.body.appendChild(overlay);
 
   // 导航栏
