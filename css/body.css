@@ -63,7 +63,6 @@ body {
     display: none;
 }
 
-/* 标题、底部 */
 header,
 footer {
     background-color: #FF9999;
@@ -82,8 +81,12 @@ main {
     position: fixed;
     right: 1%;
     bottom: 5%;
+    box-sizing: border-box;
     width: 3rem;
-    z-index: 10;
+    padding: 0.3rem;
+    border-radius: 2rem;
+
+    z-index: 8;
     background-color: #00000060;
     opacity: 0.5;
     transition: opacity 0.3s;
