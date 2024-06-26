@@ -63,7 +63,7 @@
     margin: 0.5rem;
 
     /* 为了兼容 */
-    -webkit-mask: url('../picture/其它/list.svg') no-repeat center / contain;
+    -webkit-mask: url('../picture/其它/search.svg') no-repeat center / contain;
     /* 图片蒙版 */
     mask: url('../picture/其它/search.svg') no-repeat center / contain;
     background-color: #FFC7C7;
