@@ -98,7 +98,7 @@
     aspect-ratio: 1 / 1;
 
     /* 为了兼容 */
-    -webkit-mask: url('../picture/其它/list.svg') no-repeat center / contain;
+    -webkit-mask: url('../picture/其它/user.svg') no-repeat center / contain;
     /* 图片蒙版 */
     mask: url('../picture/其它/user.svg') no-repeat center / contain;
     background-color: #FFC7C7;
