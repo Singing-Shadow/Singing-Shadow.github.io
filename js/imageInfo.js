@@ -1,7 +1,7 @@
 // 定义 JSON 文件的相对路径
 const filePath = "../json/image.json";
 // 存储图片数据
-var JSONFolder;
+export var JSONFolder;
 
 // 使用 Fetch API 获取 JSON 文件
 fetch(filePath)
@@ -29,7 +29,7 @@ fetch(filePath)
   });
 
 // 定义一个函数，用于解析URL中的查询参数
-function getQueryParams() {
+export function getQueryParams() {
   // 获取URL中的查询字符串，并去掉开头的 ? 字符
   const queryString = window.location.search.substring(1);
   // 存储解析出来的查询参数
@@ -73,13 +73,15 @@ function loading(picture) {
   const imageContainerElement = document.createElement("div");
   imageContainerElement.id = "image";
 
-  // 创建图片元素
-  const imgElement = document.createElement("img");
-  imgElement.src = picture.href;
-  imgElement.alt = picture.name;
+  for (let i = 0; i < picture.href.length; i++) {
+    // 创建图片元素
+    const imgElement = document.createElement("img");
+    imgElement.src = picture.href[i];
+    imgElement.alt = picture.name;
 
-  // 将图片元素添加到链接元素中
-  imageContainerElement.appendChild(imgElement);
+    // 将图片元素添加到链接元素中
+    imageContainerElement.appendChild(imgElement);
+  }
 
   // 创建信息展示区域的容器元素
   const infoContainerElement = document.createElement("div");
@@ -105,16 +107,22 @@ function loading(picture) {
   downloadButton.addEventListener("click", () => {
     // 弹出密码输入框
     const password = prompt("请输入下载密码:");
-
     // 正确密码
     const correctPassword = "616";
     // 检查密码是否正确
     if (password === correctPassword) {
+      // 解析URL中的查询参数、并从json文件中找到对应的图片序号
+      const i = getQueryParams().id - 1;
       // 密码正确，执行下载操作
-      const a = document.createElement("a");
-      a.href = picture.href;
-      a.download = picture.name;
-      a.click();
+      if (JSONFolder[i].href.length === 1) {
+        const a = document.createElement("a");
+        a.href = JSONFolder[i].href[0];
+        a.download = JSONFolder[i].name;
+        a.click();
+      }
+      else {
+        downloadPicturesAsZip(JSONFolder[i]);
+      }
     } else {
       // 密码错误，显示提示信息
       alert("密码错误，无法下载。");
@@ -165,4 +173,44 @@ function loading(picture) {
 
   // 返回包含图片信息的容器元素
   return containerElement;
+}
+
+// 下载图片并创建zip文件
+function addImagesToZip(zip, picture) {
+  return new Promise((resolve, reject) => {
+    let count = 0;
+    picture.href.forEach((url, i) => {
+      JSZipUtils.getBinaryContent(url, function (err, data) {
+        if (err) {
+          reject(err);
+        } else {
+          const ext = url.split('.').pop().split('?')[0];
+          zip.file(`${picture.name}_${i + 1}.${ext}`, data, { binary: true });
+          count++;
+          if (count === picture.href.length) {
+            resolve(zip);
+          }
+        }
+      });
+    });
+  });
+}
+
+// 下载zip文件
+function downloadZip(zip, name) {
+  zip.generateAsync({ type: "blob" })
+    .then(function (content) {
+      saveAs(content, `${name}.zip`);
+    });
+}
+
+// 创建、下载zip压缩包
+async function downloadPicturesAsZip(picture) {
+  try {
+    const zip = new JSZip();
+    await addImagesToZip(zip, picture);
+    downloadZip(zip, picture.name);
+  } catch (error) {
+    console.error("压缩文件创建失败：", error);
+  }
 }

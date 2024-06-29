@@ -18,7 +18,6 @@ fetch(filePath)
     return response.json();
   })
   .then(pictureFolder => {
-    // 获取相应的图片信息
     JSONFolder = pictureFolder;
     loadMoreStuff(Path, N);
   })
@@ -26,87 +25,54 @@ fetch(filePath)
     console.error("Error fetching JSON:", error);
   });
 
-// 创建图片展示区域
-/*
-  <div>
-    <div>
-      <img src="" alt="">
-    </div>
-    <p style="bold">
-      textContent
-    </p>
-    <p>
-      textContent
-    </p>
-  </div>
-*/
-
 // 创建图片元素
 function createPathElement(picture) {
-  // 创建图片信息展示区域的容器元素
   const containerElement = document.createElement("div");
-  containerElement.classList.toggle("imageInfo-container");
+  containerElement.classList.add("imageInfo-container");
 
   // 创建图片展示区域的容器元素
   const imageContainerElement = document.createElement("div");
-  imageContainerElement.classList.toggle("image-container");
-
-  // 创建图片元素
+  imageContainerElement.classList.add("image-container");
   const imgElement = document.createElement("img");
-  imgElement.src = picture.href;
+  imgElement.src = picture.thumbnailsHref[0];
   imgElement.alt = picture.name;
   imgElement.addEventListener("click", () => {
     const id = picture.id;
     const url = `imageInfo.html?id=${encodeURIComponent(id)}`;
     window.open(url, '_blank');
   });
-
-  // 创建爱心按钮背景元素
-  const loveButtonbackground = document.createElement("div");
-  loveButtonbackground.classList.add("love-button-background");
-  loveButtonbackground.title = "喜欢";
-
+  imageContainerElement.appendChild(imgElement);
   // 创建爱心按钮元素
+  const loveButtonbackground = document.createElement("div");
+  loveButtonbackground.classList.add("love-button-container");
+  loveButtonbackground.title = "喜欢";
   const loveButton = document.createElement("div");
   loveButton.classList.add("love-button");
   loveButton.title = "喜欢";
+  // ❤切换爱心按钮的样式
   loveButton.addEventListener("click", () => {
-    // 切换爱心按钮的样式
     loveButton.classList.toggle("loved");
   });
-
-  // 将爱心按钮元素添加到爱心按钮背景元素中
   loveButtonbackground.appendChild(loveButton);
-
-  // 将图片元素添加到图片展示区域的容器元素中
-  imageContainerElement.appendChild(imgElement);
-
-  // 将爱心按钮边框元素添加到图片展示区域的容器元素中
   imageContainerElement.appendChild(loveButtonbackground);
 
   // 创建图片名称元素
   const imgNameElement = document.createElement("p");
   imgNameElement.textContent = picture.name;
-  // 字体粗细
   imgNameElement.style.fontWeight = "bold";
   imgNameElement.addEventListener("click", () => {
     const id = picture.id;
     const url = `imageInfo.html?id=${encodeURIComponent(id)}`;
     window.open(url, '_blank');
   });
-
   // 创建图片作者元素
   const imgAuthorElement = document.createElement("p");
   imgAuthorElement.textContent = picture.author;
 
-  // 将图片展示区域的容器元素添加到图片信息展示区域的容器元素中
   containerElement.appendChild(imageContainerElement);
-  // 将图片名称元素添加到图片信息展示区域的容器元素中
   containerElement.appendChild(imgNameElement);
-  // 将图片作者元素添加到图片信息展示区域的容器元素中
   containerElement.appendChild(imgAuthorElement);
 
-  // 返回包含图片信息的容器元素
   return containerElement;
 }
 

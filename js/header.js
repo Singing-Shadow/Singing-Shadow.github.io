@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   userContainer.appendChild(userIcon);
 
   // 遮罩层
-  const overlay = document.createElement('div');
+  const overlay = document.createElement('section');
   overlay.classList.add("overlay");
   overlay.onclick = () => {
     overlay.classList.toggle("overlay-open");
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(overlay);
 
   // 导航栏
-  const navList = document.createElement('div');
+  const navList = document.createElement('nav');
   navList.classList.add("nav-list");
   const navListTitle = document.createElement('div');
   navListTitle.classList.add("nav-list-title");

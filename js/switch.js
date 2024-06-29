@@ -1,3 +1,5 @@
+import { getQueryParams, JSONFolder } from '../js/imageInfo.js';
+
 // 切换到新一张图片
 function goToNewImage(i) {
   // 获取当前图片的索引
@@ -28,11 +30,15 @@ function getCurrentIndex() {
 // 更新图片
 function updateImage(index) {
   // 获取图片元素
-  const imgElement = document.querySelector('#image img');
-
-  // 更新图片的 src 和 alt 属性
-  imgElement.src = JSONFolder[index].href;
-  imgElement.alt = JSONFolder[index].name;
+  const imageContainerElement = document.getElementById('image');
+  imageContainerElement.innerHTML = "";
+  for (let i = 0; i < JSONFolder[index].href.length; i++) {
+    // 创建图片元素
+    const imgElement = document.createElement("img");
+    imgElement.src = JSONFolder[index].href[i];
+    imgElement.alt = `${JSONFolder[index].name}-${i + 1}`;
+    imageContainerElement.appendChild(imgElement);
+  }
 
   // 更新图片名称元素
   const imgNameElement = document.getElementById('name');

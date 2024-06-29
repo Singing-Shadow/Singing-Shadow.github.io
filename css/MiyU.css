@@ -18,7 +18,6 @@
 /* 图片容器 */
 #gallery .image-container {
     position: relative;
-    display: inline-block;
     border-radius: 4%;
 
     width: 100%;

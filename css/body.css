@@ -76,7 +76,7 @@ main {
     min-height: 90vh;
 }
 
-/* 返回顶部按钮容器 */
+/* 返回顶部按钮 */
 #up-to-top {
     position: fixed;
     right: 1%;
@@ -92,7 +92,6 @@ main {
     transition: opacity 0.3s;
 }
 
-/* 返回顶部按钮 */
 #up-to-top-button {
     display: block;
     width: 100%;
@@ -105,15 +104,12 @@ main {
     cursor: pointer;
 }
 
-/* 禁用按钮 */
 #up-to-top-button:disabled {
     cursor: default;
 }
 
 /* 针对非PC设备 */
 @media only screen and (max-width: 768px) {
-
-    /* 全局设定 */
     * {
         font-family: "微软雅黑 Light", "Microsoft YaHei Light", "微软雅黑", "Microsoft YaHei";
     }

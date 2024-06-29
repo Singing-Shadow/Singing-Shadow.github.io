@@ -51,7 +51,7 @@ function createPathElement(picture) {
 
   // 创建图片元素
   const imgElement = document.createElement("img");
-  imgElement.src = picture.href;
+  imgElement.src = picture.thumbnailsHref[0];
   imgElement.alt = picture.name;
   imgElement.addEventListener("click", () => {
     const id = picture.id;
