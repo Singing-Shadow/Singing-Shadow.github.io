@@ -85,6 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let startY;
   let endX;
   let endY;
+  let startTime;
 
   // 处理触摸开始事件
   function handleTouchStart(evt) {
@@ -138,6 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
     startY = null;
     endX = null;
     endY = null;
+    startTime = null;
   }
 
   // 添加触摸事件监听器
