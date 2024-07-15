@@ -1,15 +1,15 @@
 // 定义 JSON 文件的相对路径
-const filePath = "../json/image.json";
+const filePath = '../json/image.json';
 // 存储图片数据
 let JSONFolder;
 // 当前加载到的图片索引
 let currentIndex = 0;
 // 图片列表展示区域
-const Path = "imageList";
+const Path = 'imageList';
 // 每页加载的条目数量
 const N = 24;
 // 搜索框输入值
-let searchContest = "";
+let searchContest = ``;
 
 // 使用 Fetch API 获取 JSON 文件
 fetch(filePath)

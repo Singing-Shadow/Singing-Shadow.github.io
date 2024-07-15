@@ -50,7 +50,7 @@
     border-radius: 3px;
 
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #FFC7C7;
     cursor: pointer;
 }
 
@@ -62,7 +62,7 @@
 
     -webkit-mask: url('../picture/其它/search.svg') no-repeat center / contain;
     mask: url('../picture/其它/search.svg') no-repeat center / contain;
-    background-color: #FFC7C7;
+    background-color: #FF9999;
 }
 
 #header .search-container>.search-text {
@@ -70,6 +70,9 @@
     width: 20rem;
     margin: 0;
     text-align: left;
+    font-size: 0.8rem;
+    outline: none;
+    background-color: #FFC7C7;
 }
 
 /* 随便搞的 */

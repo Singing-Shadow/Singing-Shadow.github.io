@@ -1,7 +1,9 @@
+export { JSONFolder, getQueryParams };
+
 // 定义 JSON 文件的相对路径
-const filePath = "../json/image.json";
+const filePath = '../json/image.json';
 // 存储图片数据
-export var JSONFolder;
+let JSONFolder;
 
 // 使用 Fetch API 获取 JSON 文件
 fetch(filePath)
@@ -29,7 +31,7 @@ fetch(filePath)
   });
 
 // 定义一个函数，用于解析URL中的查询参数
-export function getQueryParams() {
+function getQueryParams() {
   // 获取URL中的查询字符串，并去掉开头的 ? 字符
   const queryString = window.location.search.substring(1);
   // 存储解析出来的查询参数

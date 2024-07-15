@@ -60,6 +60,7 @@
 
 #text {
     width: 8rem;
+    outline: none;
 }
 
 /* 设置栏搜索按钮 */

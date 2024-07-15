@@ -1,11 +1,11 @@
 // 定义 JSON 文件的相对路径
-const filePath = "../json/image.json";
+const filePath = '../json/image.json';
 // 存储图片数据
-var JSONFolder;
+let JSONFolder;
 // 当前加载到的图片索引
 let currentIndex = 0;
 // 图片展示区域
-const Path = "gallery";
+const Path = 'gallery';
 // 每页加载的图片数量
 const N = 8;
 
@@ -60,14 +60,19 @@ function createPathElement(picture) {
   const imgNameElement = document.createElement("p");
   imgNameElement.textContent = picture.name;
   imgNameElement.style.fontWeight = "bold";
-  imgNameElement.addEventListener("click", () => {
+  imgNameElement.onclick = () => {
     const id = picture.id;
     const url = `imageInfo.html?id=${encodeURIComponent(id)}`;
     window.open(url, '_blank');
-  });
+  };
   // 创建图片作者元素
   const imgAuthorElement = document.createElement("p");
   imgAuthorElement.textContent = picture.author;
+  imgAuthorElement.onclick = () => {
+    const author = picture.author;
+    const url = `search.html?name=${encodeURIComponent(author)}`;
+    window.open(url, '_blank');
+  }
 
   containerElement.appendChild(imageContainerElement);
   containerElement.appendChild(imgNameElement);
