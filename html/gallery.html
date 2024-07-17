@@ -10,15 +10,13 @@
     <link rel="stylesheet" href="../css/body.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/gallery.css">
-    <script src="../js/body.js"></script>
-    <script src="../js/header.js"></script>
-    <script src="../js/lazyLoad.js"></script>
-    <script src="../js/gallery.js"></script>
+    <script type="module" src="../js/body.js"></script>
+    <script type="module" src="../js/gallery.js"></script>
 </head>
 
 <body>
     <header id="header">
-        <button class="nav-button" type="button" title="菜单"></button>
+        <button class="aside-button" type="button" title="菜单"></button>
         <div>
             <a href="main.html" class="logo-icon"></a>
         </div>
@@ -35,29 +33,14 @@
         </div>
     </header>
     <section class="overlay"></section>
-    <nav class="nav-list">
-        <div class="nav-list-title">
-            <button class="nav-button" type="button" title="菜单"></button>
+    <aside class="aside-list">
+        <div class="aside-list-title">
+            <button class="aside-button" type="button" title="菜单"></button>
             <div>
                 <a href="main.html" class="logo-icon"></a>
             </div>
         </div>
-        <div class="nav-list-item-container">
-            <a href="main.html">首页</a>
-            <a href="gallery.html">Pising</a>
-            <a href="https://www.pixiv.net">Pixiv</a>
-        </div>
-        <div class="nav-list-item-container">
-            <a href="MiyU.html">MiyU专栏</a>
-            <a href="imageList.html">插画列表</a>
-            <a href="https://arcwiki.mcd.blue">Arcaea</a>
-        </div>
-        <div class="nav-list-item-container">
-            <a href="https://dylanyu233.rbind.io">友情链接1</a>
-            <a href="https://github.com/MrRightXingYue">友情链接2</a>
-            <a href="home.html">我的</a>
-        </div>
-    </nav>
+    </aside>
     <main>
         <div id="gallery">
         </div>

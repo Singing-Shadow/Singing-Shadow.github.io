@@ -1,25 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // 导航栏\侧边栏切换
-  const navButtons = document.getElementsByClassName('nav-button');
-  const overlay = document.getElementsByClassName('overlay')[0];
-  const navList = document.getElementsByClassName('nav-list')[0];
-  const toggleNav = () => {
-    overlay.classList.toggle("overlay-open");
-    navList.classList.toggle("nav-open");
-    document.body.classList.toggle('no-scroll');
-  };
-  Array.from(navButtons).forEach(navButton => {
-    navButton.onclick = toggleNav;
-  });
-  overlay.onclick = toggleNav;
-
+// 添加搜索栏规则
+export function addSearchRules() {
   // 搜索框默认文本切换
   const searchPlaceholder = document.getElementsByClassName('search-text')[0];
-  // 保存原始的 placeholder
   const originalPlaceholder = searchPlaceholder.placeholder;
+  // 获得焦点
   searchPlaceholder.addEventListener('focus', () => {
-    searchPlaceholder.placeholder = '';
+    searchPlaceholder.placeholder = '仅支持搜索作者';
   });
+  // 失去焦点
   searchPlaceholder.addEventListener('blur', () => {
     searchPlaceholder.placeholder = originalPlaceholder;
   });
@@ -32,4 +20,4 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = `search.html?name=${encodeURIComponent(searchContest)}`;
     }
   });
-});
+}

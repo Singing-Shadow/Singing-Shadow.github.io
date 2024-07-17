@@ -15,15 +15,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip-utils/0.1.0/jszip-utils.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <!------------------------------------------------>
-    <script src="../js/body.js"></script>
-    <script src="../js/header.js"></script>
+    <script type="module" src="../js/body.js"></script>
     <script type="module" src="../js/switch.js"></script>
     <script type="module" src="../js/imageInfo.js"></script>
 </head>
 
 <body>
     <header id="header">
-        <button class="nav-button" type="button" title="菜单"></button>
+        <button class="aside-button" type="button" title="菜单"></button>
         <div>
             <a href="main.html" class="logo-icon"></a>
         </div>
@@ -40,32 +39,29 @@
         </div>
     </header>
     <section class="overlay"></section>
-    <nav class="nav-list">
-        <div class="nav-list-title">
-            <button class="nav-button" type="button" title="菜单"></button>
+    <aside class="aside-list">
+        <div class="aside-list-title">
+            <button class="aside-button" type="button" title="菜单"></button>
             <div>
                 <a href="main.html" class="logo-icon"></a>
             </div>
         </div>
-        <div class="nav-list-item-container">
-            <a href="main.html">首页</a>
-            <a href="gallery.html">Pising</a>
-            <a href="https://www.pixiv.net">Pixiv</a>
-        </div>
-        <div class="nav-list-item-container">
-            <a href="MiyU.html">MiyU专栏</a>
-            <a href="imageList.html">插画列表</a>
-            <a href="https://arcwiki.mcd.blue">Arcaea</a>
-        </div>
-        <div class="nav-list-item-container">
-            <a href="https://dylanyu233.rbind.io">友情链接1</a>
-            <a href="https://github.com/MrRightXingYue">友情链接2</a>
-            <a href="home.html">我的</a>
-        </div>
-    </nav>
+    </aside>
 
     <main>
         <div id="imageInfo">
+            <div>
+                <div id="image"></div>
+                <div id="info">
+                    <div id="setting">
+                        <div class="love" title="喜欢"></div>
+                        <div id="download" title="下载"></div>
+                    </div>
+                    <div id="name" style="font-size: 1.2rem; font-weight: bold;"></div>
+                    <div id="author" style="font-weight: bold;"></div>
+                    <div id="label" style="font-size: 0.9rem;"></div>
+                </div>
+            </div>
         </div>
         <div id="otherImage">
         </div>
