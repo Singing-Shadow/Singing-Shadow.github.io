@@ -2,6 +2,9 @@ import { createAsideItemsContainers, switchAside } from './aside.js';
 import { addSearchRules } from './header.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  main();
+});
+function main() {
   // create add items containers
   createAsideItemsContainers();
   // create footer text
@@ -14,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addSearchRules();
   // add global event listeners
   addGlobalEventListeners();
-});
+}
 
 // 创建页脚信息
 function createFooterText() {

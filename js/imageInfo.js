@@ -1,3 +1,9 @@
+// ------------↓release↓------------
+import JSZip from 'jszip';
+import JSZipUtils from 'jszip-utils';
+import { saveAs } from 'file-saver';
+// ------------↑提交时记得搞回来↑------------
+
 import { JSONconfig } from './constants.js'
 import { addChangeImageListener } from './switch.js'
 // 存储图片数据
@@ -5,6 +11,13 @@ let JSONFolder;
 // 当前图片的序号
 export let index;
 
+// release时使用
+document.addEventListener('DOMContentLoaded', () => {
+  main();
+  addChangeImageListener();
+});
+// main();// debug时使用
+// addChangeImageListener();
 async function main() {
   JSONFolder = await JSONconfig.JSONFolder;
   const params = getQueryParams();
@@ -12,9 +25,7 @@ async function main() {
   index = params.id - 1;
   updateImage();
   addClickListener();
-  addChangeImageListener();
 }
-main();
 
 // 解析URL中的查询参数
 export function getQueryParams() {

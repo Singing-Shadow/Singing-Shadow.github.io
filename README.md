@@ -13,7 +13,7 @@
 
 - 前端：HTML, CSS, JavaScript
 - 脚本：Python
-- 其他工具：markdown
+- 其他工具：markdown, webpack(注：npx webpack)
 
 ## 查看项目\网页
 
@@ -21,7 +21,7 @@
 
 ## 当前版本
 
-版本：3.3.9
+版本：3.3.10
 
 ## 项目结构
 

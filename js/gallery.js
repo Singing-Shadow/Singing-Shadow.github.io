@@ -1,11 +1,13 @@
 import { loadMoreStuff, addLazyLoadListener } from './lazyLoad.js';
 const Path = 'gallery';
 
+document.addEventListener('DOMContentLoaded', () => {
+  main();
+});
 function main() {
   loadMoreStuff(Path, createPathElement, judgePicture);
   addLazyLoadListener(Path, createPathElement, judgePicture);
 }
-main();
 
 // 创建图片元素
 export function createPathElement(picture) {

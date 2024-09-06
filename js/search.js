@@ -2,6 +2,9 @@ import { pictureconfig } from './constants.js';
 import { loadMoreStuff, addLazyLoadListener } from './lazyLoad.js';
 const Path = 'gallery';
 
+document.addEventListener('DOMContentLoaded', () => {
+  main();
+});
 function main() {
   // 解析URL中的查询参数
   pictureconfig.flag = getQueryParams().name;
@@ -9,7 +12,6 @@ function main() {
   loadMoreStuff(Path, createPathElement, judgePicture);
   addLazyLoadListener(Path, createPathElement, judgePicture);
 }
-main();
 
 // 定义一个函数，用于解析URL中的查询参数
 function getQueryParams() {

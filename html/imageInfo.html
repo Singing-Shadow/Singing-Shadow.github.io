@@ -10,26 +10,35 @@
     <link rel="stylesheet" href="../css/body.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/imageInfo.css">
+    <!---------------------debug---------------------------->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip-utils/0.1.0/jszip-utils.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script type="module" src="../js/body.js"></script>
+    <script type="module" src="../js/imageInfo.js"></script> -->
+    <!------------------------------------------------------>
+    <!---------------------release-------------------------->
     <script src="../dist/body.bundle.js"></script>
     <script src="../dist/imageInfo.bundle.js"></script>
+    <!------------------------------------------------------>
 </head>
 
 <body>
     <header id="header">
         <button class="aside-button" type="button" title="菜单"></button>
         <div>
-            <a href="main.html" class="logo-icon"></a>
+            <a href="main.html" class="logo-icon" title="首页"></a>
         </div>
         <div class="search-container">
             <div class="search-icon"></div>
-            <input class="search-text" type="text" placeholder="搜索作品">
+            <input id="header-search" class="search-text" type="text" placeholder="搜索作品">
         </div>
         <div class="null">加入Pising高级会员</div>
         <div class="null">投稿作品↓</div>
         <div class="null">信息</div>
         <div class="null">通知</div>
         <div>
-            <a href="login.html" target="_blank" class="user-icon"></a>
+            <a href="login.html" target="_blank" class="user-icon" title="用户页面"></a>
         </div>
     </header>
     <section class="overlay"></section>
@@ -37,7 +46,7 @@
         <div class="aside-list-title">
             <button class="aside-button" type="button" title="菜单"></button>
             <div>
-                <a href="main.html" class="logo-icon"></a>
+                <a href="main.html" class="logo-icon" title="首页"></a>
             </div>
         </div>
     </aside>

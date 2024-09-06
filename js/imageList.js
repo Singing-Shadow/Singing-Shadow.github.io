@@ -3,6 +3,9 @@ import { changeCurrentIndex, changeN, loadMoreStuff, addLazyLoadListener } from 
 let searchContest = ``;
 const Path = 'imageList';
 
+document.addEventListener('DOMContentLoaded', () => {
+  main();
+});
 function main() {
   changeN(30);
   // 初始化加载列表
@@ -10,7 +13,6 @@ function main() {
   loadMoreStuff(Path, createPathElement, judgePicture);
   addLazyLoadListener(Path, createPathElement, judgePicture);
 }
-main();
 
 // 创建列表展示区域
 function createElement() {
