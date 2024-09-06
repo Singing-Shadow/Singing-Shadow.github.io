@@ -1,3 +1,6 @@
+@import url("body.css");
+@import url("header.css");
+
 /* 画廊 */
 #imageList-container {
     display: flex;

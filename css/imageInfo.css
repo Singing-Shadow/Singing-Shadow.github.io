@@ -1,3 +1,6 @@
+@import url("body.css");
+@import url("header.css");
+
 /* 图片信息 */
 #imageInfo {
     border-radius: 1%;
