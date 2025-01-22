@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>乙巳新春快乐！</title>
+</head>
+
+<body id="Spring_Festival">
+    <main id="main">
+        <div class="image" id="python">
+            <img src="./python_Logo.png" alt="python_Logo">
+        </div>
+        <div class="image" id="Snakes">
+            <img src="./巳蛇.gif" alt="巳蛇">
+        </div>
+        <div class="image" id="music">
+            <img src="./音乐音符.png" alt="music">
+        </div>
+    </main>
+</body>
+
+<style>
+    body {
+        background-color: #800000;
+        margin: 0;
+    }
+
+    #main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+
+        overflow: hidden;
+        background-image: url(./弹幕滚屏.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .image {
+        position: relative;
+        /* 默认图片大小 */
+        width: 50%;
+        aspect-ratio: 1 / 1;
+    }
+
+    #python {
+        position: absolute;
+        /* 图片位置 */
+        top: 0%;
+        left: 0%;
+        /* 图片大小 */
+        width: 4%;
+        border-radius: 4%;
+        overflow: hidden;
+        cursor: help;
+    }
+
+    #music {
+        position: absolute;
+        /* 图片位置 */
+        top: 0%;
+        left: 4%;
+        /* 图片大小 */
+        width: 4%;
+        border-radius: 4%;
+        overflow: hidden;
+    }
+
+    .image>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+<script>
+    // 播放音频
+    let audio = new Audio('./恭喜发财-刘德华.mp3');
+    document.getElementById('Spring_Festival').onclick = function () {
+        audio.play();
+        audio.loop = true;
+    }
+    document.getElementById('music').onclick = function () {
+        if (audio.muted) {
+            audio.muted = false;
+        }
+        else {
+            audio.muted = true;
+        }
+    }
+    document.getElementById('python').onclick = function () {
+        // 弹出弹窗，点击取消则不执行以下代码
+        if (!confirm("是否打开彩蛋？")) {
+            return;
+        }
+        let currentTime = new Date().getTime();
+        // 根据当前时间，随机跳转到其中一个网页
+        if (currentTime % 2 == 0) {
+            window.open('https://www.python.org/', '_blank');
+        }
+        else {
+            window.open('https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe', '_blank');
+        }
+    }
+</script>
+
+</html>
